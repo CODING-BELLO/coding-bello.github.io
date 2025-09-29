@@ -1,22 +1,10 @@
 ---
 title: Controllo di flusso
 layout: default
-nav_order: 1
+nav_order: 2
 parent: Fondamenti di programmazione in C++
 ---
-# Leggibilità del codice
-
-Per rendere un programma facile da leggere e capire, è importante curare:
-
-- **Naming convention**: dare nomi chiari e significativi alle variabili e alle funzioni.
-- **Indentazione**: organizzare il codice con spazi o tabulazioni per mostrare la struttura.
-- **Commenti**: scrivere brevi spiegazioni nel codice per chiarire cosa fa ogni parte.
-
-**Concetto chiave:** codice chiaro = meno errori e più facile manutenzione.
-
----
-
-# Controllo del flusso: le decisioni in C++
+# Le decisioni in C++
 
 Un programma non esegue sempre le istruzioni in sequenza: a volte deve **prendere decisioni**, cioè scegliere quali istruzioni eseguire in base a certe condizioni.
 

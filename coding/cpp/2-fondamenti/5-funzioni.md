@@ -1,18 +1,10 @@
 ---
 title: Funzioni in C++
 layout: default
-nav_order: 2
+nav_order: 4
 parent: Fondamenti di programmazione in C++
 ---
-# Leggibilità del codice
 
-- Naming convention  
-- Indentazione  
-- Commenti
-
-Concetti:
-
-- Codice chiaro = meno errori, più manutenzione
 # Funzioni
 
 - Cos’è una funzione: pezzo di codice che fa qualcosa  
