@@ -4,108 +4,142 @@ layout: default
 nav_order: 1
 parent: Concetti avanzati programmazione in C++
 ---
-# Programmazione a Oggetti in C++  
-*Introduzione concettuale per studenti delle scuole superiori*
+## Programmazione a Oggetti 
 
-> “La programmazione a oggetti non è scrivere codice in un certo linguaggio, ma **pensare in termini di oggetti**.”  
-> — Alan Kay (ideatore del termine “Object Oriented”)
+La programmazione a oggetti (OOP) è un paradigma di programmazione che tratta le componenti di un programma come ogetti aventi uno stato e un comportamento.
 
-## Obiettivi di questo documento
+Con la programmazione a oggetti arriveremo a un nuovo livello di astrazione, per cui cominceremo a modellare la realtà dei nostri problemi mediante dei modelli, con delle caratteristiche e delle funzioni.
 
-- Capire **perché** esiste la programmazione a oggetti (OOP)  
-- Comprendere i **principi fondamentali**: astrazione, incapsulamento, modularità, ereditarietà e polimorfismo  
-- Saper riconoscere e progettare **classi e oggetti**  
-- Distinguere chiaramente **concetti teorici** da **costrutti del linguaggio C++**
+La programmazione a oggetti, come tutti i fondamentali concetti teorici dell'informatica, può essere affrontata senza toccare una singola linea di codice. Essa infatti è un paradigma e non un linguaggio, possiamo vederla come un nuovo modo di pensare più organizzato e strutturato, rispetto alla tradizionale programmazione procedurale. 
 
-## Perché la programmazione a oggetti?
+## Classi e oggetti
+- Un Oggetto rappresenta un **concetto specifico del mondo reale** (es. Studente, Automobile, Rettangolo...).
+- Una Classe rappresenta il **modello astratto a cui un oggetto fa riferimento**.
 
-Quando i programmi diventano più complessi (migliaia di righe), serve un modo per **organizzare il codice** in blocchi logici facilmente riutilizzabili e manutenibili.
+Es. 
+Possiamo identificare Studente come il nostro modello astratto (Classe). Studente è un concetto, un'idea, un'astrazione di tutti gli studenti veri e propri, con un nome, una storia, degli amici.
 
-### Programmazione procedurale (classica)
+Davide, che è uno studente di 3A, rappresenta invece un oggetto della Classe Studente. Davide è lo studente vero! 
 
-- Il codice è composto da **funzioni** e **variabili globali**.  
-- Tutto è “sparso” e la complessità cresce velocemente.  
-- Esempio: gestire uno studente con tante variabili globali → rischio errori.
+
+Una classe rappresenta il modello astratto, l'Oggetto rappresenta l'espressione di quel modello in termini reali.
+
+## Motivazioni
+
+Spesso dopo questa introduzione viene da chiedersi cosa di nuovo si può fare con questo paradigma. La risposta è nulla più rispetto al codice scritto fino ad ora, ma scrivendo programmi più facili da leggere, meglio strutturati e più vicini al nostro modo di pensare. 
+
+Negli anni ‘70 e ’80 i linguaggi più diffusi (C, Fortran, Pascal) erano procedurali. I programmi erano una sequenza di istruzioni e funzioni che manipolavano dati, e anche noi, fino ad ora, ci siamo concentrati su questo tipo di programmazione.
+
+Man mano che i software prendevano sempre più piede, si inizarono a riscontrare alcuni problemi:
+- difficoltà nella manutenzione e nella modifica
+- difficoltà di riutilizzare pezzi di codice in contesti diversi (parti diverse del programma)
+- forte dipendenza funzioni e dati
+
+
+# Dalla teoria alla pratica con C++
+
+
+## Definizione di una classe
+
+Di seguito una prima definizione per la Classe Studente. Questa Classe rappresenta il concetto di studente, avente un nome, un'età e una media.
 
 ```cpp
-string nomeStudente;
-int etaStudente;
-float mediaStudente;
+class Studente {
+    public:
+        /********   Attributi (Stato)   *******/
+        string nome;
+        int eta;
+        float media;
 
-void stampaStudente() {
-    cout << nomeStudente << ", " << etaStudente << " anni, media " << mediaStudente << endl;
-}
+        /********   Costruttore   *******/
+        Studente(string n, int e, float m) : nome(n), eta(e), media (m) {}
+
+        /********   Metodi (Comportamento)   *******/
+        void stampa() const {
+            cout << nome << ", " << eta << " anni, media " <<   media << endl;
+        }
+};
 ```
 
-### Programmazione a oggetti
+**Importante:** La scelta di attributi e metodi è specifica per il problema che si sta trattando, avremmo potuto avere un attributo "Nazione" se d'interesse.
 
-- Si ragiona in termini di **oggetti** con proprietà e comportamenti.  
-- Le informazioni e le funzioni sono **racchiuse insieme**.  
+# Componenti di una classe
+Come si vede dall'esempio, una classe ha tre diverse componenti
+- **Attributi**: rappresentano lo stato dell'oggetto
+- **Costruttore**: permette di creare gli oggetti specifici che seguono il modello definito dalla classe
+- **Metodi**: rappresentano il comportamento di un oggetto
 
-Spesso dopo questa introduzione viene da chiedersi cosa di nuovo si può fare con questo paradigma. La risposta è nulla di più, ma possiamo fare le stesse cose in modo più strutturato e naturale, più vicino al nostro modo di pensare.
-È un po’ come indossare jeans comodi o skinny, sono effettivamente sempre pantaloni ma non scherziamo, NO SKINNY!!! :O (non aboliamo la programmazione procedurale pura ci serve un sacco)
-
-Esempio parallelo:
+## Attributi di una Classe
+Gli attributi sono le variabili dichiarate all’interno della classe, e rappresentano lo stato interno di ogni oggetto.
+Per **stato** si intende l'insieme dei valori delle variabili dichiarate dentro all'oggetto.
 
 ```cpp
-// Procedurale: stampa info di uno studente
-string nome = "Luca";
-int eta = 17;
-float media = 8.5;
-
-cout << nome << ", " << eta << " anni, media " << media << endl;
-
-// A oggetti: stesso risultato, ma più chiaro e modulare
 class Studente {
 public:
     string nome;
     int eta;
     float media;
-
-    void stampa() {
-        cout << nome << ", " << eta << " anni, media " << media << endl;
-    }
 };
 
 int main() {
     Studente s;
+
+    /***      Stato dell'oggetto s      ***/
     s.nome = "Luca";
     s.eta = 17;
-    s.media = 8.5;
-    s.stampa();
+    s.media = 8.5; 
+
+
+    /***      Modifica dello stato s    ***/
+    s.media = 7; 
 }
 ```
 
-- Gli oggetti rappresentano **concetti del mondo reale** (es. Studente, Automobile, Rettangolo...).
+## Costruttore di una Classe
+Un costruttore è un metodo speciale che ha lo stesso nome della classe, non ha tipo di ritorno (neanche void) e viene chiamato automaticamente quando si crea un oggetto.
+
+Serve per inizializzare correttamente lo stato di uno studente al momento della creazione.
+
 
 ```cpp
-class Studente {
-public:
-    string nome;
-    int eta;
-    float media;
-
-    void stampa() {
-        cout << nome << ", " << eta << " anni, media " << media << endl;
+// Costruttore per la classe studente definita sopra
+    Studente(string n, int e, float m) {
+        nome = n;
+        eta = e;
+        media = m;
     }
-};
+```
 
+
+Utilizzo
+```cpp
 int main() {
-    Studente s;
-    s.nome = "Luca";
-    s.eta = 17;
-    s.media = 8.5;
-    s.stampa();
+    Studente s("Luca", 17, 8.5); // 👈 costruttore chiamato qui
+    cout << s.getNome() << ", " << s.getEta() << " anni, media " << s.getMedia();
 }
 ```
 
-## Concetto chiave: Classe vs Oggetto
+## Metodi di una classe
+I metodi definiscono il comportamento dell’oggetto, ovvero cosa può fare uno Studente.
+
+E' possibile utilizzare i metodi per:
+	•	modificare lo stato interno dell'oggetto (aggiornare la media)
+	•	restituire informazioni (stampare i dati)
+	•	implementare logiche più complesse (calcoli, ecc.)
+
+
+## Comparazione: Classe vs Struct
+I costrutti di Classe e Struct sono quasi equivalenti dal punto di vista tecnico. Entrambi possono avere uno stato, dei metodi e i costruttori, con l'unica differenza che 
+- **struct**: visibilità public di default, usata per dati semplici, senza incapsulamento
+- **class**: visibilità private di default, usata per oggetti con stato protetto e comportamento
+
+## Comparazione: Classe vs Oggetto
 
 | **Classe**            | **Oggetto** |
 |------------------------|------------|
-| “Modello” o “progetto” | “Esemplare” creato da quel modello |
+| Rappresenta il modello | E' l'esemplare specifico, creato da quel modello |
 | Definisce struttura e comportamento | Ha valori concreti nei suoi campi |
-| È come una *ricetta* | È la *torta* realizzata con quella ricetta |
+| Automobile | Fiat 500 rossa, targa XXYY |
 
 ```cpp
 class Rettangolo {
@@ -132,98 +166,86 @@ int main() {
 }
 ```
 
-## Misconcezione comune 1: “La classe è come una variabile”
+**Errore comune: utilizzare la classe come una variabile**
 
-> ❌ *“Ho dichiarato la classe, quindi ho già creato un oggetto.”*  
-> ✅ No! La classe è **solo una definizione**. L’oggetto si crea con la **dichiarazione di una variabile di quel tipo** (es. `Studente s;`).
+> *“Ho dichiarato la classe, quindi ho già creato un oggetto.”* a.k.a. scrivere codice tipo `Rettangolo.area()`. La Classe è **solo una definizione**. L’oggetto si crea con la **dichiarazione di una variabile di quel tipo** e **mantiene lo stato** dell'oggetto stesso. 
+
+> In riferimento al codice sopra, quali base e altezza si utilizzano chiamando `Rettangolo.area()`?
+
+
+## Visibilità degli attributi di una Classe
+
+La keyword ```public``` rappresenta la visibilità delle componenti della classe al di fuori della classe stessa (dentro al main).
+
+All’inizio, per semplicità, è comune dichiararli come public:
+```cpp
+class Studente {
+public:
+    string nome;
+    int eta;
+    float media;
+};
+```
+
+per cui possiamo usarli liberamente dal main
+```cpp
+int main() {
+    Studente s;
+    s.nome = "Luca";
+    s.eta = 17;
+    s.media = 8.5;
+
+    cout << s.nome << " ha " << s.eta << " anni e media " << s.media << endl;
+}
+```
+Questo metodo funziona, ma può portare a problemi. Chiunque utilizzi la nostra classe Studente potrebbe fare questo:
+
+```cpp
+s.eta = -42;   // valore assurdo
+s.media = 54;  // media no sense
+```
+
+E' quindi buona pratica dichiarare tutti gli attributi come private e accedere ai dati solo attraverso metodi (ovviamente pubblici). 
+Questo permette di:
+	•	protegge l’integrità dello stato: nessuno può modificare i dati, se non utilizzando le funzioni che il creatore della classe ha messo a disposizione
+	•	permette di aggiungere controlli senza cambiare il codice utente
+	•	rende più chiara l’interfaccia pubblica
+
+```cpp
+class Studente {
+private:
+    string nome;
+    int eta;
+    float media;
+
+public:
+    void setNome(string n) { nome = n; }
+    void setEta(int e) {
+        if (e >= 0) eta = e;
+    }
+    void setMedia(float m) {
+        if (m >= 1 && m <= 10) media = m;
+    }
+
+    string getNome() const { return nome; }
+    int getEta() const { return eta; }
+    float getMedia() const { return media; }
+};
+```
+
+Attraverso questa implementazione, abbiamo protetto eta e media da valori che non ci piacciono. Se qualcuno vuole impostare "eta" con un numero minore di zero, non potrà farlo, così come inserire una media che non rientra nell'intervallo 1 - 10.
+
+
+>**Misconcezione comune**: private serve solo a non far vedere le cose
+Il punto di mettere private sulle variabile, non è per rendere oscuro o nascondere il valore delle variabili da occhi indiscreti, ma **proteggere l’integrità** dei dati e **definire un’interfaccia dell'oggetto in maniera chiara**. Spesso ci si ritrova a sviluppare in contesti dinamici, con molte persone. Sviluppare una classe con solo alcuni metodi pubblici, significa comunicare alle persone che usano quella classe "ho pensato che voi potete fare questo -> metodi pubblici"
+
 
 ## Incapsulamento e visibilità
 
-- **Incapsulamento** significa “racchiudere” dati e funzioni dentro l’oggetto e **controllare l’accesso** a questi dati.
-- `public`: accessibile da fuori  
-- `private`: accessibile solo dall’interno della classe
+**Incapsulamento** significa “racchiudere” dati e funzioni dentro l’oggetto e **controllare l’accesso** a questi dati.
+- `public`: accessibile e modificabile da fuori
+- `private`: accessibile e modificabile solo dall’interno della classe
 
-### Stato di un oggetto e incapsulamento
-
-- Lo **stato** di un oggetto è l’insieme dei valori delle sue proprietà in un dato momento.
-- Cambiando i dati interni tramite i metodi, **lo stato dell’oggetto cambia**.
-
-```cpp
-class Lampadina {
-private:
-    bool accesa;
-
-public:
-    void accendi() { accesa = true; }
-    void spegni() { accesa = false; }
-    bool stato() { return accesa; }
-};
-
-int main() {
-    Lampadina l;
-    l.accendi();          
-    cout << l.stato();    // true
-    l.spegni();           
-    cout << l.stato();    // false
-}
-```
-
-> ⚠️ Misconcezione comune: lo stato non è “qualcosa di automatico” o invisibile: è sempre definito dai valori dei dati interni.
-
-```cpp
-class ContoBancario {
-private:
-    double saldo;
-
-public:
-    ContoBancario() {
-        saldo = 0;
-    }
-
-    void deposita(double x) {
-        saldo += x;
-    }
-
-    double ottieniSaldo() {
-        return saldo;
-    }
-};
-
-int main() {
-    ContoBancario c;
-    c.deposita(100);
-    cout << c.ottieniSaldo();  // ✅ 100
-}
-```
-
-## Misconcezione comune 2: “Private serve solo a non far vedere le cose”
-
-> ❌ *“Metto tutto public così è più facile accedere.”*  
-> ✅ No! Il punto non è “nascondere” ma **proteggere l’integrità** dei dati e **definire un’interfaccia chiara**.
-
-## Costruttori e stato iniziale
-
-```cpp
-class Punto {
-private:
-    int x, y;
-
-public:
-    Punto(int _x, int _y) {
-        x = _x;
-        y = _y;
-    }
-
-    void stampa() {
-        cout << "(" << x << "," << y << ")";
-    }
-};
-
-int main() {
-    Punto p(3, 4);
-    p.stampa();  // (3,4)
-}
-```
 
 ## Ereditarietà: riuso e specializzazione
 
@@ -256,9 +278,18 @@ int main() {
 }
 ```
 
-## Riepilogo e altri concetti utili
 
-In questa lezione abbiamo visto i concetti fondamentali della programmazione a oggetti in C++:
+## Naming convention per classi e oggetti
+
+In C++ è buona pratica seguire alcune convenzioni di naming per migliorare la leggibilità del codice:
+
+- Le **classi** seguono la convenzione **PascalCase**, cioè ogni parola inizia con lettera maiuscola, esempio: `Studente`, `Rettangolo`, `Automobile`.
+- Gli **oggetti** seguono generalmente la convenzione **camelCase** (la prima parola minuscola, le successive con la lettera maiuscola), esempio: `studente1`, `rettangoloGrande`.
+- Per gli oggetti, può essere utilizzato uno stile tutto minuscolo con parole separate da underscore, ad esempio: `studente_1`, `rettangolo_grande`.
+
+Seguire queste convenzioni aiuta a distinguere facilmente classi e oggetti nel codice, e in generale a fare chiarezza.
+
+## Riepilogo
 
 - **Classe**: modello o progetto che definisce dati e comportamenti.
 - **Oggetto**: istanza di una classe, con uno stato specifico.
@@ -266,13 +297,10 @@ In questa lezione abbiamo visto i concetti fondamentali della programmazione a o
 - **Stato di un oggetto**: insieme dei valori delle proprietà in un dato momento.
 - **Costruttori**: metodi speciali per inizializzare oggetti.
 - **Ereditarietà**: permette di creare classi derivate riutilizzando caratteristiche di altre classi.
-- **Polimorfismo** (concetto introduttivo): capacità di un oggetto di comportarsi in modi diversi in base al contesto, spesso tramite funzioni virtuali (non approfondito qui).
+- **Polimorfismo** (solo introdotto): capacità di un oggetto di comportarsi in modi diversi in base al contesto, spesso tramite funzioni virtuali (non approfondito qui).
 
 ### Suggerimenti pratici
 
 - Sempre pensare agli oggetti come **entità reali** con proprietà e comportamenti.
 - Definire chiaramente l’**interfaccia pubblica** della classe (metodi `public`) e mantenere i dati sensibili `private`.
 - Usare l’ereditarietà solo quando ha senso logico, altrimenti preferire la **composizione** (un oggetto dentro un altro).
-- Annotare sempre il codice con commenti chiari, soprattutto quando si introducono concetti OOP.
-
-Questo riepilogo ti aiuterà a costruire una **solida base concettuale** prima di approfondire altri aspetti avanzati come polimorfismo dinamico, template e gestione della memoria in C++.
