@@ -1,7 +1,7 @@
 ---
 title: Primi algoritmi notevoli in C
-layout: defaults
-nav_order: 5
+layout: default
+nav_order: 8
 parent: Fondamenti di programmazione in C++
 ---
 
