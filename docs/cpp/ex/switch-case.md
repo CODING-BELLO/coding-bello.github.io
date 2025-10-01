@@ -2,14 +2,17 @@
 title: Esercizi switch
 layout: default
 nav_order: 1
-nav_exclude: true
+parent: Esercizi in C++
 ---
 
 # Menu con Switch-Case e Do-While
 
 ## **Esercizio 1**
 
-**Codice da analizzare:**
+**Domanda:** 
+1. Questo programma è corretto? 
+2. Che cosa stampa? 
+3. Correggere se presenta errore
 
 ```cpp
 #include <iostream>
@@ -33,20 +36,16 @@ int main() {
 }
 ```
 
-**Domanda:** Cosa stampa questo programma?
-
-**Risposta:** Il programma stampa:
-
-- Opzione 2 selezionata
-- Opzione 3 selezionata
-- Opzione non valida
-
-**Mancano i break!** Quando entra nel case 2, esegue quel blocco, poi **continua con il case 3** (fall-through) e il default.
 ***
 
 ## **Esercizio 2**
 
-**Codice da analizzare:**
+**Domanda:** Questo programma visualizza un menu con diverse scelte:
+- utente inserisce 1, il programma esegue un calcolo (non riportato perchè non d'interesse)
+- utente inserisce 2, stampa
+- utente inserisce 0, termina.
+
+Il seguente programma è corretto? Testarlo e, se errato, modificarlo.
 
 ```cpp
 #include <iostream>
@@ -83,23 +82,16 @@ int main() {
 }
 ```
 
-**Domanda:** Questo programma visualizza un menu con diverse scelte:
-- utente inserisce 1, il programma esegue un calcolo (non riportato perchè non d'interesse)
-- utente inserisce 2, stampa
-- utente inserisce 0, termina.
-
-Il seguente programma è corretto? Testarlo e, se errato, modificarlo.
-
-
-**Risposta:** Il programma **esce subito dopo il do**! L'errore è nella condizione del while: `opzione = 0` è un'**ASSEGNAZIONE** (non un confronto) ed è valutata come false.
-
-Se si modifica con  `opzione != 0`, il programma viene corretto.
-
 ***
 
 ## **Esercizio 3**
 
-**Codice da analizzare:**
+
+**Domanda:** Cosa stampa il programma se l'utente inserisce 'e'? 
+
+- Il programma stampa "Uscita..."
+- Il programa stampa "Comando 'e' non riconosciuto!"
+- Nulla, il programma esce dal do-while e termina
 
 ```cpp
 #include <iostream>
@@ -132,15 +124,11 @@ int main() {
 }
 ```
 
-**Domanda:** Cosa stampa il programma se l'utente inserisce 'e'? 
-
-- Il programma stampa "Uscita..."
-- Il programa stampa "Comando 'e' non riconosciuto!"
-- Nulla, il programma esce dal do-while e termina
-
 ***
 
 ## **Esercizio 4**
+
+**Domanda:** A partire dal codice, scrivi la specifica funzionale che qualcuno avrebbe potuto scrivere per sviluppare questo programma.
 
 ```cpp
 #include <iostream>
@@ -184,13 +172,18 @@ int main() {
 }
 ```
 
-**Domanda:** A partire dal codice, scrivi la specifica funzionale che qualcuno avrebbe potuto scrivere per sviluppare questo programma.
-
 ***
 
 ## **Esercizio 5**
 
-**Codice da analizzare:**
+**Domanda:** Cosa fa questo programma se l'utente inserisce 'J'?
+
+**Opzioni di risposta**
+
+- Il programma non esegue nulla e si rimette in attesa di un nuovo cin
+- Il programma stampa "JUVE STORIA DI UN GRANDE AMORE BIANCO CHE ABBRACCIA IL NERO" e si rimette in attesa di un nuovo cin
+- Il programma stampa "Hai scelto Inter!" e si rimette in attesa di un nuovo cin
+- Il programma stampa "Scelta non valida!"
 
 ```cpp
 #include <iostream>
@@ -223,17 +216,10 @@ int main() {
 }
 ```
 
-**Domanda:** Cosa fa questo programma se l'utente inserisce 'J'?
-
-**Opzioni di risposta**
-
-- Il programma non eseguito nulla e si rimette in attesa di un nuovo cin
-- Il programma stampa "JUVE STORIA DI UN GRANDE AMORE BIANCO CHE ABBRACCIA IL NERO" e si rimette in attesa di un nuovo cin
-- Il programma stampa "Hai scelto Inter!" e si rimette in attesa di un nuovo cin
-- Il programma stampa "Scelta non valida!"
-
 
 ## **Esercizio 6**
+
+**Domanda:** Cosa stampa questo programma? (opzioni sotto)
 
 ```cpp
 #include <iostream>
@@ -263,7 +249,6 @@ int main() {
 }
 ```
 
-**Domanda:** Cosa stampa questo programma?
 
 **Risposta:** Il programma stampa:
 

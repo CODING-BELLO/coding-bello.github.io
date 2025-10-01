@@ -2,12 +2,14 @@
 title: Esercizi array
 layout: default
 nav_order: 1
-nav_exclude: true
+parent: Esercizi in C++
 ---
 
 # Esercizi di Lettura Codice - Array in C++
 
 ## **Esercizio 1**
+
+**Domanda:** Il seguente programma compila ed esegue? Che cosa stampa?
 
 ```cpp
 #include <iostream>
@@ -24,13 +26,11 @@ int main() {
 }
 ```
 
-**Domanda:** Il seguente programma compila ed esegue? Che cosa stampa?
-
 ***
 
 ## **Esercizio 2**
 
-**Codice da analizzare:**
+**Domanda:** Il seguente programma compila ed esegue? Che cosa stampa?
 
 ```cpp
 #include <iostream>
@@ -47,12 +47,11 @@ int main() {
 }
 ```
 
-**Domanda:** Il seguente programma compila ed esegue? Che cosa stampa?
-
-
 ***
 
-## **Esercizio 3: Modifica durante l'iterazione**
+## **Esercizio 3**
+
+**Domanda:** Cosa stampa questo programma? Motivare brevemente la risposta
 
 ```cpp
 #include <iostream>
@@ -72,12 +71,11 @@ int main() {
 }
 ```
 
-**Domanda:** Cosa stampa questo programma? Motivare brevemente la risposta
 ***
 
 ## **Esercizio 4**
 
-**Codice da analizzare:**
+**Domanda:** Cosa stampa questo programma e qual è lo scopo della variabile posizione?
 
 ```cpp
 #include <iostream>
@@ -104,13 +102,11 @@ int main() {
 }
 ```
 
-**Domanda:** Cosa stampa questo programma e qual è lo scopo della variabile posizione?
-
 ***
 
 ## **Esercizio 5**
 
-**Codice da analizzare:**
+**Domanda:** Cosa fa questo programma?
 
 ```cpp
 #include <iostream>
@@ -129,12 +125,11 @@ int main() {
 }
 ```
 
-**Domanda:** Cosa fa questo programma?
-
 ***
 
 ## **Esercizio 6**
 
+**Domanda:** Quanti voti sufficienti e quanti voti eccellenti conta questo programma? Che cosa stampa?
 
 ```cpp
 #include <iostream>
@@ -161,14 +156,11 @@ int main() {
 }
 ```
 
-**Domanda:** Quanti voti sufficienti ed eccellenti conta questo programma?
-
 ***
 
-## **Esercizio 7: Array multidimensionale - Accesso pericoloso**
+## **Esercizio 7**
 
-**Codice da analizzare:**
-
+**Domanda:** Il seguente programma è corretto? Che cosa stampa?
 ```cpp
 #include <iostream>
 using namespace std;
@@ -182,7 +174,3 @@ int main() {
     return 0;
 }
 ```
-
-**Domanda:** Cosa stampa questo programma? C'è qualche problema?
-
-**Risposta:** La prima riga stampa 6 (elemento ). La seconda riga ha un errore: accede a matrice, ma la seconda dimensione va da 0 a 2. Questo causa un accesso fuori dai limiti con comportamento indefinito.[3][4][2]

@@ -2,14 +2,14 @@
 title: Esercizi struct
 layout: default
 nav_order: 1
-nav_exclude: true
+parent: Esercizi in C++
 ---
 
-# Esercizi di Lettura Codice - Struct in C++
+# Esercizi costrutto struct in C++
 
-## **Esercizio 1: Inizializzazione parziale - Cosa succede ai campi mancanti?**
+## **Esercizio 1**
 
-**Codice da analizzare:**
+**Domanda:** Cosa stampa questo programma? Che valori assumono i campi non inizializzati?
 
 ```cpp
 #include <iostream>
@@ -34,21 +34,11 @@ int main() {
 }
 ```
 
-**Domanda:** Cosa stampa questo programma? Che valori assumono i campi non inizializzati?
-
-**Risposta:** Il programma stampa:
-
-- s1: Marco, 17, 0
-- s2: Luca, 0, 0
-- s3: , 0, 0
-
-Quando si inizializza parzialmente una struct, i campi non specificati vengono inizializzati con **valori di default**: 0 per i numeri, stringa vuota per le stringhe.
-
 ***
 
-## **Esercizio 2: Accesso ai campi - Precedenza degli operatori**
+## **Esercizio 2**
 
-**Codice da analizzare:**
+**Domanda:** Cosa stampa questo programma? Come vengono valutate le espressioni?
 
 ```cpp
 #include <iostream>
@@ -70,21 +60,11 @@ int main() {
 }
 ```
 
-**Domanda:** Cosa stampa questo programma? Come vengono valutate le espressioni?
-
-**Risposta:** Il programma stampa:
-
-- 7 (3 + 4)
-- 6 (3 * 2)
-- 7 (1 + 6)
-
-L'operatore di accesso ai campi `.` ha **precedenza molto alta**, quindi prima vengono estratti i valori dai campi, poi vengono eseguite le operazioni aritmetiche. `array.x` viene valutato come `(array).x`.[1]
-
 ***
 
-## **Esercizio 3: Confronto di struct - Cosa è consentito?**
+## **Esercizio 3**
 
-**Codice da analizzare:**
+**Domanda:** Il seguente programma compila ed esegue? Correggerlo in caso di errori
 
 ```cpp
 #include <iostream>
@@ -99,36 +79,22 @@ int main() {
     Coordinate p2 = {5, 3};
     Coordinate p3 = p1;
     
-    // cout << (p1 == p2) << endl;  // Questa riga causa errore!
-    
-    cout << (p1.x == p2.x) << endl;
-    cout << (p1.y == p2.y) << endl;
-    cout << (p1.x == p2.x && p1.y == p2.y) << endl;
-    
-    cout << "p3.x: " << p3.x << ", p3.y: " << p3.y << endl;
+    if(p1.x == p2.x)
+    {
+        cout << "p1 e p2 sono uguali" << endl;
+    } else {
+        cout << "p1 e p2 sono diversi" << endl;
+    }
     
     return 0;
 }
 ```
 
-**Domanda:** Perché la riga commentata causa errore? Come si confrontano le struct? Cosa succede con l'assegnazione `p3 = p1`?
-
-**Risposta:** La riga commentata causa errore perché **NON è possibile confrontare direttamente due struct** con `==`. Bisogna confrontare campo per campo.
-
-Il programma stampa:
-
-- 1 (true)
-- 1 (true)
-- 1 (true)
-- p3.x: 5, p3.y: 3
-
-L'**assegnazione** `p3 = p1` invece funziona perfettamente: copia tutti i campi di p1 in p3.
-
 ***
 
-## **Esercizio 4: Struct annidate - Accesso ai campi interni**
+## **Esercizio 4**
 
-**Codice da analizzare:**
+**Domanda:** Il seguente programma compila ed esegue? Correggerlo in caso di errori
 
 ```cpp
 #include <iostream>
@@ -152,33 +118,18 @@ int main() {
     p.casa.numero = 42;
     p.eta = 25;
     
-    cout << p.nome << " abita in " << p.casa.via << " " << p.casa.numero << endl;
+    cout << p.nome << " abita in " << p.via << " " << p.numero << endl;
     cout << "Ha " << p.eta << " anni" << endl;
-    
-    Persona p2 = {"Marco", {"Via Milano", 15}, 30};
-    cout << p2.casa.via << " " << p2.casa.numero << endl;
     
     return 0;
 }
 ```
 
-**Domanda:** Come si accede ai campi di una struct annidata? Come funziona l'inizializzazione di p2?
-
-**Risposta:** Per accedere ai campi annidati si usa la notazione `p.casa.via` (**doppio punto**).
-
-Il programma stampa:
-
-- Anna abita in Via Roma 42
-- Ha 25 anni
-- Via Milano 15
-
-L'inizializzazione di p2 usa **parentesi graffe annidate**: `{"Via Milano", 15}` inizializza la struct Indirizzo interna.
-
 ***
 
-## **Esercizio 5: Array di struct - Inizializzazione e accesso**
+## **Esercizio 5**
 
-**Codice da analizzare:**
+**Domanda:** Il seguente programma compila ed esegue? Correggerlo in caso di errori
 
 ```cpp
 #include <iostream>
@@ -194,44 +145,26 @@ int main() {
         {"Matematica", 8},
         {"Italiano", 7},
         {"Storia", 9}
-        // Il quarto elemento non è inizializzato!
     };
-    
-    for(int i = 0; i < 4; i++) {
-        cout << "Materia: " << voti[i].materia << ", Voto: " << voti[i].valore << endl;
-    }
     
     voti[3].materia = "Inglese";
     voti[3].valore = 6;
     
-    cout << "Dopo aver aggiunto Inglese:" << endl;
     cout << voti[3].materia << ": " << voti[3].valore << endl;
     
     return 0;
 }
 ```
 
-**Domanda:** Cosa stampa il programma per il quarto elemento prima e dopo l'assegnazione?
-
-**Risposta:** Prima dell'assegnazione, il quarto elemento ha i **valori di default**: stringa vuota per materia e 0 per valore.
-
-Il programma stampa:
-
-- Materia: Matematica, Voto: 8
-- Materia: Italiano, Voto: 7
-- Materia: Storia, Voto: 9
-- Materia: , Voto: 0 ← **quarto elemento con valori default**
-- Dopo aver aggiunto Inglese:
-- Inglese: 6
-
 ***
 
 
-## **Esercizio 6: Struct con array interni**
+## **Esercizio 6**
 
-**Codice da analizzare:**
+**Domanda:** Cosa stampa questo programma? Motivare la risposta
 
 ```cpp
+
 #include <iostream>
 using namespace std;
 
@@ -246,20 +179,17 @@ int main() {
     
     cout << "Studente " << c1.nome << ":" << endl;
     for(int i = 0; i < 5; i++) {
+        if(c1.voti[i] < 5){  }
         cout << "Voto " << i << ": " << c1.voti[i] << endl;
     }
     
-    cout << "Studente " << c2.nome << ":" << endl;
-    for(int i = 0; i < 5; i++) {
-        cout << "Voto " << i << ": " << c2.voti[i] << endl;
-    }
+    
     
     return 0;
 }
 ```
 
-**Domanda:** Cosa stampa questo programma?
-
+<!--
 **Risposta:** 
 
 ***
@@ -454,3 +384,4 @@ Il programma stampa:
 - (8, 8)
 
 `creaOrigine()` restituisce una struct inizializzata con `{0, 0}`. Si possono anche usare **espressioni** nei valori: `{5 + 3, 2 * 4}` diventa `{8, 8}`.
+-->
