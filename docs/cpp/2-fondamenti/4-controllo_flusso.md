@@ -21,31 +21,82 @@ L'istruzione `if` permette di eseguire una parte di codice solo se una condizion
 
 ### Esempio base
 ```cpp
+
+    if (condizione) {
+        cout << "La condizione è positiva" << endl;
+    } else {
+        cout << "La condizione è negativa" << endl;
+    }
+
+```
+
+# Operatori Relazionali e Logici
+
+Quando programmiamo, spesso dobbiamo **confrontare valori** o **combinare più condizioni** per decidere che azioni eseguire.  
+Ad esempio:
+- “L’età è maggiore di 18 anni?”  
+- “La temperatura è sotto lo zero **e** sta nevicando?”  
+
+Per farlo, usiamo **operatori relazionali** e **operatori logici**.
+
+---
+
+## Operatori Relazionali
+
+Gli **operatori relazionali** servono per confrontare due valori e restituiscono un risultato **booleano**, cioè:
+- `true` → se la condizione è vera  
+- `false` → se la condizione è falsa
+
+| Operatore | Significato           | Esempio (`a = 5`, `b = 10`) | Risultato |
+|-----------|-------------------------|-----------------------------|-----------|
+| `==`      | Uguale a               | `a == b`                   | `false`   |
+| `!=`      | Diverso da             | `a != b`                   | `true`    |
+| `<`       | Minore di              | `a < b`                    | `true`    |
+| `>`       | Maggiore di            | `a > b`                    | `false`   |
+| `<=`      | Minore o uguale a     | `a <= b`                   | `true`    |
+| `>=`      | Maggiore o uguale a   | `a >= b`                   | `false`   |
+
+### Esempio in C++
+```cpp
 #include <iostream>
 using namespace std;
 
 int main() {
-    int numero;
-    cout << "Inserisci un numero: ";
-    cin >> numero;
+    int eta = 20;
 
-    if (numero > 0) {
-        cout << "Il numero è positivo." << endl;
-    } else if (numero < 0) {
-        cout << "Il numero è negativo." << endl;
+    if (eta >= 18) {
+        cout << "Puoi prendere la patente!" << endl;
     } else {
-        cout << "Il numero è zero." << endl;
+        cout << "Sei troppo giovane." << endl;
     }
+
     return 0;
 }
 ```
-**Output esempio:**
-```
-Inserisci un numero: -5
-Il numero è negativo.
-```
 
-### Esempi pratici aggiuntivi
+## Operatori Logici in C++
+
+Gli **operatori logici** servono per **combinare più condizioni booleane** (vero/falso) in un’unica espressione.  
+Li usiamo spesso in strutture di controllo come `if`, `while`, `for`, ecc.
+
+Ad esempio:
+- “La temperatura è sotto zero **e** sta nevicando?”  
+- “L’utente è maggiorenne **oppure** ha un permesso speciale?”  
+- “La condizione non è vera?”
+
+---
+
+## Tabella degli Operatori Logici
+
+| Operatore | Nome          | Significato                                                                 | Esempio                        | Risultato |
+|-----------|---------------|------------------------------------------------------------------------------|---------------------------------|-----------|
+| `&&`      | AND logico    | Vero solo se **entrambe** le condizioni sono vere                             | `true && false`                | `false`   |
+| `||`      | OR logico     | Vero se **almeno una** delle condizioni è vera                                | `true || false`               | `true`    |
+| `!`       | NOT logico    | **Inverte** il valore: `true` diventa `false` e viceversa                     | `!true`                       | `false`   |
+
+---
+
+## Esempi Pratici
 
 #### Verifica della maggiore età
 ```cpp
@@ -70,6 +121,25 @@ if (n % 2 == 0) {
     cout << "Il numero è pari." << endl;
 } else {
     cout << "Il numero è dispari." << endl;
+}
+```
+
+#### Controllo temperatura sotto zero e neve
+Vogliamo controllare se fa freddo **e** nevica:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int temperatura = -3;
+    bool nevica = true;
+
+    if (temperatura < 0 && nevica) {
+        cout << "Sta nevicando e fa freddo!" << endl;
+    }
+
+    return 0;
 }
 ```
 
