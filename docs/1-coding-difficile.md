@@ -2,6 +2,7 @@
 title: Sulla difficoltà del coding
 layout: default
 nav_order: 3
+nav_exclude: true
 ---
 ## Programmare è complesso
 

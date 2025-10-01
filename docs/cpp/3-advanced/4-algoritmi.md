@@ -8,8 +8,3 @@ parent: Coding in C++
 
 - Operazioni STL: sommare valori, max/min, contare elementi  
 - Iteratori  
-- Ricorsione
-
-Ripresa concetto:
-
-- Programma = dati + regole per elaborarli

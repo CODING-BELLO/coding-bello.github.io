@@ -93,7 +93,7 @@ Ogni funzione si occupa di un **compito specifico**, più facile da leggere, tes
 
 ---
 
-## Misconcezioni comuni
+## Errori comuni
 
 1. **Variabili locali vs globali**  
    Le variabili dentro una funzione **non esistono fuori dalla funzione**. 

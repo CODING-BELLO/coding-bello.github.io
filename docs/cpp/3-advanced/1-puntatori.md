@@ -4,6 +4,13 @@ layout: default
 nav_order: 11
 parent: Coding in C++
 ---
+
+---
+
+#### WIP
+
+---
+
 # Puntatori
 
 - Sintassi per creare un puntatore  
