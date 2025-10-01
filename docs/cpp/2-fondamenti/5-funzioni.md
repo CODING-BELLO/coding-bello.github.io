@@ -130,4 +130,97 @@ int main() {
 }
 ```
 
+
+---
+
+# Ricorsione
+
+La **ricorsione** è una tecnica in cui **una funzione chiama se stessa**. Tipicamente è utilizzata all'interno di algoritmi in cui è neccessario effettuare qualcosa di ripetitivo, sostituendo `for` e `while`. Nella realtà, la ricorsione non sostituisce solamente i costrutti di ripetizione, è molto più potente. 
+Problemi come il calcolo fattoria, la sequenza di numeri di Fibonacci, possono essere rappresentati mediante un algoritmo ricorsivo.
+
+Questo è un primo esempio di algoritmo ricorsivo...
+
+```cpp
+int fattoriale(int n) {
+    return n * fattoriale(n - 1); // passo ricorsivo
+}
+```
+
+...che se eseguito non termina mai! La chiamata di questa funzione genererebbe infatti un ciclo(loop) infinito di chiamate alla funzione fattoriale().
+
+### Componenti di una funzione ricorsiva
+
+Per funzionare correttamente, una funzione ricorsiva deve sempre avere:
+
+1. **Caso base** → la condizione che **ferma** la ricorsione.  
+2. **Passo ricorsivo** → la chiamata a se stessa su un “problema più piccolo”.
+
+>**Intuizione**: una funzione con ricorsione funziona proprio per la presenza del caso base. Ad ogni chiamata ricorsiva, viene eseguita la funzione, passandogli come input un nuovo valore (N.B. le variabili primitive in C++ vengono passate come valore e non come riferimento!)
+
+---
+
+#### Esempio: fattoriale di un numero
+
+Il **fattoriale** di un numero `n` (scritto `n!`) è definito così:
+
+- `0! = 1`  (caso base)  
+- `n! = n × (n - 1)!` per `n > 0`  (passo ricorsivo)
+
+Ecco la versione ricorsiva in C++:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int fattoriale(int n) {
+    if (n == 0) {
+        return 1; // caso base
+    } else {
+        return n * fattoriale(n - 1); // passo ricorsivo
+    }
+}
+
+int main() {
+    cout << fattoriale(5) << endl; // stampa 120
+    return 0;
+}
+```
+
+Chiamata per `n = 5`:
+
+```
+fattoriale(5)
+= 5 × fattoriale(4)
+= 5 × 4 × fattoriale(3)
+= 5 × 4 × 3 × fattoriale(2)
+= 5 × 4 × 3 × 2 × fattoriale(1)
+= 5 × 4 × 3 × 2 × 1 × fattoriale(0)
+= 5 × 4 × 3 × 2 × 1 × 1
+= 120
+```
+
+---
+
+### Errore comune nella ricorsione
+
+Un errore **frequentissimo** è **dimenticare il caso base**, oppure scriverlo in modo sbagliato.  
+Questo, come detto in precedenza, porta a **chiamate infinite** → la funzione continua a chiamare se stessa senza mai fermarsi → il programma va in **stack overflow** (esaurisce la memoria dedicata alle chiamate).
+
+Esempio **sbagliato**:
+
+```cpp
+int fattoriale(int n) {
+    return n * fattoriale(n - 1); // manca il caso base!
+}
+```
+
+Questo codice continuerà a chiamare `fattoriale(-1)`, `fattoriale(-2)`, ecc. fino a crashare.
+
+---
+
+### Quando usare la ricorsione?
+
+- Quando il problema può essere **spezzato in sottoproblemi simili all’originale**.  
+- Quando si vuole una soluzione **più leggibile** ed elegante rispetto a quella con cicli `for` e `while`.  
+
 [Prossima lezione](6-leggibilita)
