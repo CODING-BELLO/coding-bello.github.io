@@ -1,7 +1,7 @@
 ---
 title: Primi algoritmi notevoli
 layout: default
-nav_order: 10
+nav_order: 11
 parent: Coding in C++
 ---
 

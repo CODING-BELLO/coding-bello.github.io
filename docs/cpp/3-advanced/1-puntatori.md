@@ -1,7 +1,7 @@
 ---
 title: Puntatori
 layout: default
-nav_order: 11
+nav_order: 12
 parent: Coding in C++
 ---
 

@@ -132,4 +132,4 @@ In questo esempio:
 
 Ricorda: un codice leggibile è un codice di qualità! Prenditi sempre il tempo per scrivere bene, perché ti farà risparmiare molto tempo in futuro.
 
-[Prossima lezione](7-strutture-dati-base)
+[Prossima lezione](7-strutture)

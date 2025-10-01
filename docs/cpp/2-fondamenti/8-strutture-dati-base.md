@@ -1,13 +1,13 @@
 ---
 title: Strutture dati base
 layout: default
-nav_order: 9
+nav_order: 10
 parent: Coding in C++
 ---
 
 # Strutture dati di base
 
-Immaginiamo di dover gestire i dati di una piccola stazione meteorologica. La stazione registra ogni giorno, a diverse ore, la temperatura esterna. Abbiamo bisogno di mantenere lo storico di queste temperature, al fine di analizzarle quando necessario. Fortunatamente, con i linguaggi di programmazione moderni non dobbiamo creare centinaia di variabili `float` per mantenere la temperatura, possiamo avvalerci delle *. In questa sezione tratteremo due strutture dati di base in C++: gli **array** e i **vector**.
+Immaginiamo di dover gestire i dati di una piccola stazione meteorologica. La stazione registra ogni giorno, a diverse ore, la temperatura esterna. Abbiamo bisogno di mantenere lo storico di queste temperature, al fine di analizzarle quando necessario. Fortunatamente, con i linguaggi di programmazione moderni non dobbiamo creare centinaia di variabili `float` per mantenere la temperatura, esistono modi molto più comodi!. In questa sezione tratteremo due strutture dati di base in C++: gli **array** e i **vector**.
 
 ---
 
@@ -161,4 +161,6 @@ int numeri[3] = {5, 10, 15};
 std::cout << numeri[0] << std::endl; // stampa 5, il primo elemento
 ```
 
-[Prossima lezione](8-algoritmi)
+[Esercizi su array e scansioni](../ex/array)
+
+[Prossima lezione](9-algoritmi)

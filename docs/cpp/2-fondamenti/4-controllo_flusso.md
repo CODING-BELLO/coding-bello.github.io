@@ -319,5 +319,6 @@ switch (giorno) {
 - Fai attenzione ai principali errori: confusione tra `=` e `==`, `else` senza `if`, dimenticare il `break` nello `switch`.
 - Commenta sempre il tuo codice e prova a scrivere piccoli esempi per capire come funzionano questi costrutti!
 
+[Esercizi Switch Case e Do-while](../ex/switch-case)
 
 [Prossima lezione](5-cicli)
