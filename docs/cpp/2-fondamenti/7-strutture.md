@@ -1,5 +1,5 @@
 ---
-title: Strutture
+title: Strutture dati base struct
 layout: default
 nav_order: 9
 parent: Coding in C++
@@ -7,7 +7,7 @@ parent: Coding in C++
 
 
 
-## Cos’è una `struct`
+# Il costrutto struct
 
 Una **struct** (abbreviazione di structure) è una **struttura dati composta**:  
 permette di **raggruppare più variabili di tipi diversi** sotto un unico nome, così da trattarle come un’unica entità.

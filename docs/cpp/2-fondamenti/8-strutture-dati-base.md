@@ -1,5 +1,5 @@
 ---
-title: Strutture dati base
+title: Strutture dati base array e vector
 layout: default
 nav_order: 10
 parent: Coding in C++
