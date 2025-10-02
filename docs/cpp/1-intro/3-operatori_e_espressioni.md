@@ -21,7 +21,7 @@ Esempio:
 int somma = 5 + 3;   // somma = 8
 int resto = 10 % 3;  // resto = 1
 ```
-**Importante:** Quando si scrive un'assegnazione come `somma = 5 + 3;;`, prima viene calcolato il valore dell'espressione a destra dell'uguale (`5 + 3`). Una volta che il risultato è stato ottenuto, questo valore viene assegnato alla variabile a sinistra (`x`). Quindi, la parte destra viene sempre valutata per prima.
+**Importante:** Quando si scrive un'assegnazione come `somma = 5 + 3;`, prima viene calcolato il valore dell'espressione a destra dell'uguale (`5 + 3`). Una volta che il risultato è stato ottenuto, questo valore viene assegnato alla variabile a sinistra (`x`). Quindi, la parte destra viene sempre valutata per prima.
 
 ## Operatori di incremento e decremento
 
@@ -34,18 +34,14 @@ Servono per aumentare o diminuire il valore di una variabile.
 
 Esempio:
 ```cpp
-int a = 1;
-a++;      // a vale ora 2
-a += 3;   // a vale ora 5
+    int a = 1;
+    
+    a++;      
+    std::cout << a << std::endl; // stampa 2
+    
+    a += 3;
+    std::cout << a << std::endl; // stampa 5
 ```
-
----
-
-### Concetti chiave
-
-- **Assegnazione**: L'operatore `=` serve per assegnare un valore a una variabile. Esempio: `int x = 5;`
-- **Espressione**: Una combinazione di variabili, valori e operatori che produce un risultato. Esempio: `x + 2` è un'espressione.
-- **Risultato degli operatori relazionali**: Gli operatori relazionali restituiscono sempre un valore booleano (`true` o `false`), utile per le condizioni nei costrutti come `if` o `while` (le vedremo successivamente).
 
 
 [Prossima lezione](../2-fondamenti/4-controllo_flusso.md)

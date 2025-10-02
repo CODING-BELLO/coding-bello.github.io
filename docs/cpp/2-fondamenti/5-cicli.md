@@ -12,20 +12,20 @@ Nei programmi, spesso è necessario ripetere un'azione più volte. I cicli perme
 
 ## Concetti chiave sulla macchina e i cicli
 
-Quando il computer esegue un ciclo, segue questi passaggi fondamentali:
+Tipicamente un ciclo è composto da
+- **Corpo del ciclo**: le istruzioni che vengono ripetute n volte
+- **Condizione**: questa condizione è una condizione booleana e viene valutata a ogni ripetizione, per capire se continuare a ripetere oppure uscire
+
+Quando il programma esegue un ciclo, vengono seguiti questi passaggi fondamentali:
 
 - **Valuta la condizione**: decide se entrare o continuare il ciclo.
 - **Esegue il corpo del ciclo**: il codice che deve essere ripetuto.
-- **Aggiorna le variabili**: spesso si modifica una variabile per avvicinarsi alla condizione di uscita.
+- **Aggiorna le variabili**: spesso si modifica una variabile in modo che a un certo punto si verifichi la condizione di uscita.
 - **Ripete**: torna a valutare la condizione.
 
-Se qualcosa va storto in uno di questi passaggi, possono verificarsi errori comuni:
-
-- **Ciclo infinito**: la condizione rimane sempre vera, quindi il ciclo non termina mai.
-- **Condizione mai vera**: il ciclo non viene mai eseguito perché la condizione iniziale è falsa.
-- **Incremento fuori posto**: modificare la variabile di controllo nel posto sbagliato può causare comportamenti inattesi.
 
 ---
+# Tipi di ciclo
 
 ## Ciclo `for`
 
@@ -187,16 +187,6 @@ x vale: 1
 - Anche qui, senza decremento o modifica della variabile, si rischia un ciclo infinito.
 
 ---
-
-## Riassunto e consigli per evitare errori
-
-- **Controlla sempre la condizione**: assicurati che diventi falsa a un certo punto per evitare cicli infiniti.
-- **Modifica la variabile di controllo nel modo giusto**: incrementa o decrementa all'interno del ciclo o nella parte di aggiornamento (`for`).
-- **Fai attenzione all'inizializzazione**: il valore iniziale può influenzare se il ciclo parte o meno.
-- **Usa commenti** per spiegare cosa fa ogni ciclo, soprattutto se complesso.
-- **Prova con esempi semplici** per capire il funzionamento prima di scrivere cicli più complessi.
-
-Con questi concetti chiave, potrai usare i cicli in modo efficace e sicuro nei tuoi programmi in C++.
 
 
 [Prossima lezione](5-funzioni)

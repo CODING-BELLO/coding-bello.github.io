@@ -1,5 +1,5 @@
 ---
-title: Introduzione
+title: Primo programma
 layout: default
 nav_order: 1
 parent: Coding in C++

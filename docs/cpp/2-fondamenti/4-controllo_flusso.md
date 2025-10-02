@@ -6,29 +6,12 @@ parent: Coding in C++
 ---
 # Controllo di flusso
 
-Abbiamo visto come un programma venga eseguito sempre in sequenza. A volte però, è necessario **prendere decisioni**: scegliere quali istruzioni eseguire in base a certe condizioni.
+Abbiamo visto come un programma venga eseguito sempre in sequenza, dalla prima all'ultima istruzione. A volte però, è necessario **prendere decisioni**: scegliere quali istruzioni eseguire in base a certe condizioni. 
 
-#### Concetto chiave
->Come il programma "decide" quale strada seguire è fondamentale per scrivere codice corretto e senza errori logici.
+Ad esempio potremmo decidere di far avere due comportamenti diversi al nostro programma in base alla condizione di qualche variabile. In questa sezione, valuteremo come il programma "decide" quale strada seguire.
 
 ---
 
-# Le istruzioni di decisione
-
-## `if`, `else if`, `else`
-
-L'istruzione `if` permette di eseguire una parte di codice solo se una condizione è vera. Puoi aggiungere `else if` e `else` per gestire più casi.
-
-### Esempio base
-```cpp
-
-    if (condizione) {
-        cout << "La condizione è positiva" << endl;
-    } else {
-        cout << "La condizione è negativa" << endl;
-    }
-
-```
 
 # Operatori Relazionali e Logici
 
@@ -56,25 +39,8 @@ Gli **operatori relazionali** servono per confrontare due valori e restituiscono
 | `<=`      | Minore o uguale a     | `a <= b`                   | `true`    |
 | `>=`      | Maggiore o uguale a   | `a >= b`                   | `false`   |
 
-### Esempio in C++
-```cpp
-#include <iostream>
-using namespace std;
 
-int main() {
-    int eta = 20;
-
-    if (eta >= 18) {
-        cout << "Puoi prendere la patente!" << endl;
-    } else {
-        cout << "Sei troppo giovane." << endl;
-    }
-
-    return 0;
-}
-```
-
-## Operatori Logici in C++
+## Operatori Logici
 
 Gli **operatori logici** servono per **combinare più condizioni booleane** (vero/falso) in un’unica espressione.  
 Li usiamo spesso in strutture di controllo come `if`, `while`, `for`, ecc.
@@ -95,6 +61,45 @@ Ad esempio:
 | `!`       | NOT logico    | **Inverte** il valore: `true` diventa `false` e viceversa                     | `!true`                       | `false`   |
 
 ---
+
+# Le istruzioni di decisione
+
+## `if`, `else`, `else if`
+
+L'istruzione `if` permette di eseguire una o più istruzioni **solo se una condizione è vera**. Puoi aggiungere `else` per gestire il caso in cui la condizione sia falsa, e `else if` per controllare condizioni alternative.
+
+### 1. Solo `if`
+Il codice racchiuso tra parentesi graffe, viene eseguito **solo se la condizione è vera**. Il codice all'interno delle graffe possiamo indicarlo come "codice dentro l'if".
+```cpp
+if (x > 0) {
+    cout << "x è positivo" << endl;
+}
+```
+
+### 2. `if` con `else`
+Il blocco dentro l'`else` viene eseguito **solo se la condizione dell'if è falsa**.
+```cpp
+if (x > 0) {
+    cout << "x è positivo" << endl;
+} else {
+    cout << "x NON è positivo" << endl;
+}
+```
+
+### 3. `if` con `else if` e `else`
+Puoi controllare più condizioni in sequenza. Appena una condizione è vera, il relativo blocco viene eseguito e gli altri vengono saltati.
+```cpp
+if (x > 0) {
+    cout << "x è positivo" << endl;
+} else if (x == 0) {
+    cout << "x è zero" << endl;
+} else {
+    cout << "x è negativo" << endl;
+}
+```
+
+**Nota:** Solo il blocco corrispondente alla prima condizione vera viene eseguito; tutti gli altri vengono saltati.
+
 
 ## Esempi Pratici
 
@@ -267,10 +272,10 @@ cout << "Inserisci un numero da 1 a 7: ";
 cin >> giorno;
 
 switch (giorno) {
-    case 1:
     case 7:
         cout << "Weekend!" << endl;
         break;
+    case 1:
     case 2:
     case 3:
     case 4:

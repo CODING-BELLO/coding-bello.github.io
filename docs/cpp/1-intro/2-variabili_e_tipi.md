@@ -12,56 +12,79 @@ In questo tutorial esploreremo i concetti fondamentali delle **variabili** e dei
 
 ## Cos'è una variabile?
 
-Una variabile è un contenitore che serve a memorizzare un valore durante l'esecuzione del programma. Ogni variabile ha un **nome** e un **tipo**, che definisce il tipo di dato che può contenere (ad esempio numeri interi, numeri a virgola mobile, caratteri, ecc.).
+Una variabile è un contenitore che serve a memorizzare un valore durante l'esecuzione del programma. Ogni variabile è composta nel modo seguente
+- **tipologia**: definisce il **tipo di dato** che può contenere (ad esempio numeri interi, numeri a virgola mobile, caratteri, ecc.)
+- **nome**: definisce un nome, utilizzabile per chiamare quel concetto e utilizzarlo in parti diverse del codice
 
-### Sintassi per dichiarare una variabile
-
-```cpp
-tipo nome_variabile;
-```
-
-Esempio:
-
-```cpp
-int eta;
-double peso;
-char iniziale;
-bool isStudente;
-```
 
 ---
 
-## Tipi di dati base in C++
+## Tipi di dato base in C++
 
-Ecco alcuni dei tipi di dati più comuni:
+Questi sono i tipi di dato primitivi, rappresentano la minima informazione che possiamo rappresentare nel nostro linguaggio
 
 - `int` — numeri interi (es. 5, -10)
-- `double` — numeri in virgola mobile a doppia precisione (es. 3.14, -0.001)
-- `char` — un singolo carattere (es. 'a', 'Z')
+- `double` — numeri con la virgola (es. 3.14, -0.001)
+- `char` — singolo carattere (es. 'a', 'Z')
 - `bool` — valore booleano, `true` o `false`
-- `std::string` — stringhe di testo (richiede `#include <string>`)
+
+Introduciamo, perchè ci servirà subito, anche il tipo di dato
+- `string` — qualsiasi insieme di caratteri, numeri, simboli, sempre trattati come testo
+Le stringhe sono un tipo di dato molto potente e non primitivo, ma per noi ora è trascurabile.
+
 
 ---
 
-## Inizializzazione e assegnazione
+# Passiamo alla pratica
 
-È possibile assegnare un valore a una variabile al momento della dichiarazione:
+## Dichiarare una variabile
+
+**Dichiarare una variabile** significa far sapere a chi legge il nostro programma (il computer) che esiste un informazione che ha un certo nome. E' quindi sempre necessario effettuare la dichiarazione di una variabile prima di utilizzarla. 
+
+Nel codice sotto, stiamo semplicemente dicendo che all'interno del nostro programma, esiste una variabile chiamata a!
+
+```cpp
+int a;
+```
+
+---
+
+### Assegnazione di una variabile
+Una volta che la nostra variabile è stata dichiarata, possiamo assegnare un valore a quella variabile, coerente con il tipo che abbiamo dichiarato durante la dichiarazione;
+
+```cpp
+int a;
+a = 42;
+```
+
+E' possibile dichiarare e assegnare una variabile in un colpo solo
+
+```cpp
+int a = 42;
+```
+
+
+```cpp
+int b;
+b = 'c'; //sbagliato :(
+b = 12.2 //sbagliato :(
+b = 13 // corretto :)
+```
+
+---
+
+### Inizializzazione e assegnazione di tutti i tipi primitivi
+
 
 ```cpp
 int eta = 25;
 double peso = 70.5;
 char iniziale = 'M';
 bool isStudente = true;
+string studente = "Marco";
 ```
 
-Oppure assegnare un valore successivamente:
-
-```cpp
-int eta;
-eta = 25;
-```
-
-### Nota importante: l'assegnazione è sempre da destra a sinistra
+### L'assegnazione è sempre da destra a sinistra
 
 L'operazione `=` assegna il valore della parte destra alla variabile a sinistra.  
 Esempio corretto:
@@ -78,38 +101,41 @@ Esempio **sbagliato** che causa errore:
 
 ---
 
-## Scope di una variabile
+### Assegnare una variabile a un'altra  variabile
 
-Lo **scope** indica la parte del programma in cui la variabile è visibile e utilizzabile. Ad esempio, una variabile dichiarata all'interno di una funzione o di un blocco `{ ... }` è visibile solo in quel blocco.
+Cosa succede quando assegniamo una variabile a un'altra variabile?
 
 ```cpp
-void funzione() {
-    int x = 10; // x è visibile solo dentro questa funzione
-    {
-        int y = 20; // y è visibile solo dentro questo blocco
-    }
-    // y non è visibile qui
-}
+int a = 5;
+int b = a; 
 ```
+
+Con questa istruzione stiamo dicendo: "a vale 5, b vale lo stesso valore contenuto in a". Viene quindi effettuata una **copia del valore** della variabile. Questo tipo di assegnazione prende il nome di **assegnazione per valore**.
+
+**Domanda:** quanto vale a dopo aver eseguito tutte e 3 le istruzioni?
+
+```cpp
+int a = 5;
+int b = a; 
+b = b + 1;
+```
+
+**Risposta:** **a** vale 5, perchè a **b** è stato assegnato solo il valore di a (5). 
+
+> Importante ricordare: `a` = `b` non significa che `a` e `b` sono la stessa cosa, ma che hanno stesso valore.
 
 ---
 
-## Assegnazione per valore vs riferimento
-
-In C++, quando assegniamo una variabile a un'altra, per default si copia il valore (assegnazione per valore).
-
-```cpp
-int a = 5;
-int b = a;  // b ora contiene 5, indipendentemente da a
-```
-
-Se vogliamo lavorare con riferimenti (alias di variabili), si usa il simbolo `&`:
+### Assegnare un tipo diverso da quello dichiarato
+C++ è un linguaggio **fortemente tipato**, questo significa che viene sempre eseguito un controllo sui tipi delle variabili. Questo esempio: 
 
 ```cpp
 int a = 5;
-int& ref = a;  // ref è un riferimento a a
-ref = 10;      // modifica anche a, che diventa 10
+double b;
+
+b = a; // Errore :( 
 ```
+`b` e `a` non hanno stesso tipo, pertanto non possiamo assegnare a `b` il valore di `a` e viceversa.
 
 ---
 
@@ -117,16 +143,13 @@ ref = 10;      // modifica anche a, che diventa 10
 
 ```cpp
 #include <iostream>
-#include <string>
 
 int main() {
     int eta = 30;
     double peso = 70.5;
     char iniziale = 'F';
     bool isStudente = false;
-    std::string nome = "Federico";
 
-    std::cout << "Nome: " << nome << std::endl;
     std::cout << "Età: " << eta << std::endl;
     std::cout << "Peso: " << peso << std::endl;
     std::cout << "Iniziale: " << iniziale << std::endl;
@@ -140,7 +163,7 @@ int main() {
 
 ## Errori comuni
 
-- Tentare di assegnare un valore a un letterale:
+- Valorizzazione al contrario
 
     ```cpp
     10 = a;  // Errore
@@ -157,6 +180,12 @@ int main() {
 
     ```cpp
     char c = "abc";  // Errore: char può contenere un solo carattere
+    ```
+
+- Pensare che il computer che esegue il nostro codice sia intelligente
+
+    ```cpp
+    string numero = "fregato";  // Questo è corretto!! Sebbene la variabile si chiami numero, è di tipo stringa
     ```
 
 ---
