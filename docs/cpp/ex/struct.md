@@ -9,36 +9,7 @@ parent: Esercizi in C++
 
 ## **Esercizio 1**
 
-**Domanda:** Cosa stampa questo programma? Che valori assumono i campi non inizializzati?
-
-```cpp
-#include <iostream>
-using namespace std;
-
-struct Studente {
-    string nome;
-    int eta;
-    float media;
-};
-
-int main() {
-    Studente s1 = {"Marco", 17};
-    Studente s2 = {"Luca"};
-    Studente s3 = {};
-    
-    cout << "s1: " << s1.nome << ", " << s1.eta << ", " << s1.media << endl;
-    cout << "s2: " << s2.nome << ", " << s2.eta << ", " << s2.media << endl;
-    cout << "s3: " << s3.nome << ", " << s3.eta << ", " << s3.media << endl;
-    
-    return 0;
-}
-```
-
-***
-
-## **Esercizio 2**
-
-**Domanda:** Cosa stampa questo programma? Come vengono valutate le espressioni?
+**Domanda:** Cosa stampa questo programma? Come vengono valutate le espressioni all'interno di cout?
 
 ```cpp
 #include <iostream>
@@ -62,6 +33,34 @@ int main() {
 
 ***
 
+## **Esercizio 2**
+
+**Domanda:** Cosa stampa il seguente programma?
+
+```cpp
+#include <iostream>
+using namespace std;
+
+struct Coordinate {
+    int x, y;
+};
+
+int main() {
+    Coordinate p1 = {5, 3};
+    Coordinate p2 = p1;
+    
+    cout << "x: " << p2.x << "; y: " << p2.y << endl; // prima di modificare p1
+    
+    p1.x = 6;
+    
+    cout << "x: " << p2.x << "; y: " << p2.y << endl; // dopo modifica di p2
+    
+    return 0;
+}
+```
+
+***
+
 ## **Esercizio 3**
 
 **Domanda:** Il seguente programma compila ed esegue? Correggerlo in caso di errori
@@ -77,9 +76,8 @@ struct Coordinate {
 int main() {
     Coordinate p1 = {5, 3};
     Coordinate p2 = {5, 3};
-    Coordinate p3 = p1;
     
-    if(p1.x == p2.x)
+    if(p1 == p2)
     {
         cout << "p1 e p2 sono uguali" << endl;
     } else {
