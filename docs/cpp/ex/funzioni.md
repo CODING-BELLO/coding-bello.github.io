@@ -46,11 +46,11 @@ void incrementa2(int& n) {
 
 int main() {
     int numero = 5;
-    incrementaValore(numero);
-    cout << "Dopo incrementaValore: " << numero << endl;
+    incrementa1(numero);
+    cout << "Dopo incrementa1: " << numero << endl;
 
-    incrementaRiferimento(numero);
-    cout << "Dopo incrementaRiferimento: " << numero << endl;
+    incrementa2(numero);
+    cout << "Dopo incrementa2: " << numero << endl;
 
     return 0;
 }
@@ -198,7 +198,7 @@ void stampaStudente(string nome) {
 int main() {
     string studente = "Luca Bianchi";
     
-    cout << stampaStudente(studente);
+    cout << stampaStudente(studente) << endl;
 
     return 0;
 }
