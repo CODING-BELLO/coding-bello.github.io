@@ -121,6 +121,10 @@ int main() {
         numeri[5-i] = temp;
     }
     
+    for(int i = 0; i < 6; i++) {
+        cout << numeri [i] << endl;
+    }
+    
     return 0;
 }
 ```
