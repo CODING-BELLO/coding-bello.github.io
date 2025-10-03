@@ -45,7 +45,7 @@ int main() {
 - utente inserisce 2, stampa
 - utente inserisce 0, termina.
 
-Il seguente programma è corretto? Testarlo e, se errato, modificarlo.
+Il seguente programma è corretto? Testarlo (provando input) e, se errato, modificarlo.
 
 ```cpp
 #include <iostream>
@@ -85,7 +85,6 @@ int main() {
 ***
 
 ## **Esercizio 3**
-
 
 **Domanda:** Cosa stampa il programma se l'utente inserisce 'e'? 
 
@@ -183,7 +182,7 @@ int main() {
 - Il programma non esegue nulla e si rimette in attesa di un nuovo cin
 - Il programma stampa "JUVE STORIA DI UN GRANDE AMORE BIANCO CHE ABBRACCIA IL NERO" e si rimette in attesa di un nuovo cin
 - Il programma stampa "Hai scelto Inter!" e si rimette in attesa di un nuovo cin
-- Il programma stampa "Scelta non valida!"
+- Il programma stampa "Scelta non valida!" e si rimette in attesa di un nuovo cin
 
 ```cpp
 #include <iostream>
