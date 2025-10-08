@@ -9,7 +9,7 @@ nav_exclude: true
 No, non è vero che non ci stai capendo niente e no, non è vero che non sei abbastanza intelligente.
 E' vero invece, che sbagliare è normale e che avere dei dubbi è il modo migliore per imparare qualcosa.
 
-Il percorso di questa disciplina mette alla prova e crea una sfida, in cui si vince non raggiungendo qualche traguarda, ma semplicemente accettandola. Lasciati portare da questo processo: sbattere la testa è l’allenamento, non un segnale che non siete portati.
+Il percorso di questa disciplina mette alla prova e crea una sfida, in cui si vince non raggiungendo qualche traguarda, ma semplicemente accettandola. Lasciati portare da questo processo: sbattere la testa è l’allenamento, non un segnale che non sei portato.
 
 
 ## Trust the process
