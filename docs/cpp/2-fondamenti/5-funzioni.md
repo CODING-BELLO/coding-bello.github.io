@@ -50,6 +50,83 @@ Qui:
 
 ---
 
+## Passaggio di parametri per valore e per riferimento
+
+Quando chiamiamo una funzione, i **parametri** possono essere passati in due modi principali:
+
+1. **Per valore** → viene passata **una copia** del dato.  
+2. **Per riferimento** → viene passato **l’indirizzo del dato originale**, quindi la funzione può **modificarlo direttamente**.
+
+In C++, **per default** tutti i parametri vengono passati **per valore**, ad eccezione degli **array**, che vengono passati automaticamente per riferimento (in realtà si “degradano” a puntatori).  
+Questo significa che, se non specifichiamo diversamente, **le modifiche fatte ai parametri dentro la funzione non influenzano le variabili originali**.
+
+---
+
+### Esempio: passaggio per valore
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void incrementa(int n) {
+    n = n + 1;  // Modifica solo la copia locale
+    cout << "Dentro la funzione: n = " << n << endl;
+}
+
+int main() {
+    int x = 5;
+    incrementa(x);
+    cout << "Fuori dalla funzione: x = " << x << endl;
+    return 0;
+}
+```
+
+In questo caso:
+- All'interno della funzione, la variabile `n` viene incrementata a 6.
+- All'esterno, `x` rimane 5 perché è stata passata **una copia**, non la variabile originale.
+
+---
+
+### Esempio: passaggio per riferimento
+
+Per passare un parametro per riferimento in C++, si usa la **&** (e commerciale) nel prototipo della funzione:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void incrementaRiferimento(int &n) {
+    n = n + 1;  // Modifica direttamente la variabile originale
+    cout << "Dentro la funzione: n = " << n << endl;
+}
+
+int main() {
+    int x = 5;
+    incrementaRiferimento(x);
+    cout << "Fuori dalla funzione: x = " << x << endl;
+    return 0;
+}
+```
+
+In questo caso:
+- `n` è un riferimento a `x`, quindi qualsiasi modifica a `n` **modifica direttamente `x`**.
+- Alla fine, `x` risulta incrementato a 6 anche fuori dalla funzione.
+
+---
+
+**Ricapitolando**:
+
+| Modalità            | Copia o originale? | Può modificare la variabile chiamante? |
+|----------------------|----------------------|--------------------------------------------|
+| Per valore           | Copia                | No                                     |
+| Per riferimento      | Originale            | Sì                                     |
+
+Il passaggio per riferimento è molto utile quando:
+- Vogliamo **evitare copie inutili** di dati grandi (es. strutture, oggetti, array).  
+- Vogliamo che la funzione **modifichi direttamente** le variabili passate.  
+
+---
+
 ## Concetti fondamentali
 
 ### 1. Riuso
