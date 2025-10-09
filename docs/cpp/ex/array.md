@@ -178,3 +178,63 @@ int main() {
     return 0;
 }
 ```
+
+
+
+***
+
+## **Esercizio 8**
+
+Scrivere un programma che legge un array di 10 interi dall’utente
+
+```cpp
+
+```
+
+***
+
+## **Esercizio 9**
+
+
+Scrivere un programma che conta il numero di vocali presenti in un vettore
+di caratteri di lunghezza 10 inseriti dall’utente.
+
+```cpp
+
+```
+
+***
+
+## **Esercizio 10**
+
+Scrivere un programma che legge un array di 10 interi dall’utente
+e ne calcola la somma.
+
+
+```cpp
+
+```
+
+***
+
+## **Esercizio 11**
+
+Scrivere un programma che verifica quale tra due array di caratteri
+    di lunghezza 10, inseriti dall’utente, contiene un maggior numero di vocali.
+
+    Attenzione: non scrivere codice ridondante
+
+```cpp
+
+```
+
+***
+
+## **Esercizio 12**
+
+Leggere in input un vettore di caratteri con al massimo 100 caratteri
+e contare quante volte compare il carattere 'a'.
+
+```cpp
+
+```
