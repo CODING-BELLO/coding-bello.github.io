@@ -1,7 +1,7 @@
 ---
-title: Primi algoritmi notevoli
+title: Algoritmi di ricerca e ordinamento
 layout: default
-nav_order: 12
+nav_order: 18
 parent: Coding in C++
 ---
 

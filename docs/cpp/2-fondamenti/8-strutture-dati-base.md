@@ -1,7 +1,7 @@
 ---
 title: Array e vector
 layout: default
-nav_order: 10
+nav_order: 16
 parent: Coding in C++
 ---
 
@@ -160,6 +160,28 @@ Molti studenti si aspettano che il primo elemento di un array sia in posizione 1
 int numeri[3] = {5, 10, 15};
 std::cout << numeri[0] << std::endl; // stampa 5, il primo elemento
 ```
+
+
+# Ricapitoliamo
+- **Concetto**: sequenze ordinate di elementi dello stesso tipo.
+- **Accesso**: array[i] → i parte da 0.
+- **Scansione** / **iterazione** → sempre necessario un ciclo (for/while) per scorrere tutti gli elementi
+
+#### Operazioni comuni
+- Somma o media
+- Ricerca minimo / massimo
+- Conteggio elementi che soddisfano una condizione
+- Modifica/scambio elementi di un array
+
+#### Domande guida
+- Come accedo a un elemento specifico di un array?
+- Come posso scorrere tutti gli elementi di un array usando un ciclo?
+- Come trovo il valore minimo o massimo in un array?
+- Come calcolo la somma o la media di tutti gli elementi?
+- Come posso contare quanti elementi soddisfano una certa condizione (es. pari, multipli di 4)?
+- Come modifico un elemento specifico o scambio due elementi di un array?
+- Come trovo il primo elemento che soddisfa una condizione specifica?
+- Come posso rilevare il primo numero mancante in una sequenza ordinata?
 
 [Esercizi su array e scansioni](../ex/array)
 

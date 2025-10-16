@@ -43,5 +43,13 @@ Esempio:
     std::cout << a << std::endl; // stampa 5
 ```
 
+---
 
-[Prossima lezione](../2-fondamenti/4-controllo_flusso.md)
+## Ricapitoliamo
+
+- Gli operatori aritmetici eseguono operazioni matematiche di base: somma, sottrazione, moltiplicazione, divisione e modulo.
+- L'assegnazione valuta prima l'espressione a destra, poi assegna il valore alla variabile a sinistra.
+- Gli operatori di incremento e decremento modificano il valore di una variabile di 1 (`++`, `--`) o di un valore specificato (`+=`, `-=`).
+- Questi operatori sono fondamentali per aggiornare rapidamente i valori delle variabili nel codice.
+
+[Prossima lezione](../2-fondamenti/4-controllo_flusso)

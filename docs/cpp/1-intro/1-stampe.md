@@ -83,7 +83,7 @@ cout << "Hello world!" << endl;
 
 ---
 
-## Riepilogo
+## Ricapitoliamo
 
 - `std::cout` seguito da `<<` stampa messaggi sullo schermo.
 - `std::endl` crea un ritorno a capo.

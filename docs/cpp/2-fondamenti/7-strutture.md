@@ -1,7 +1,7 @@
 ---
 title: Strutture dati base struct
 layout: default
-nav_order: 9
+nav_order: 15
 parent: Coding in C++
 ---
 
@@ -123,6 +123,18 @@ int main() {
 ```
 
 In questo esempio, la `struct Punto` non contiene solo i dati `x` e `y`, ma anche una **funzione membro** `stampa()` che sa come mostrare quei dati.
+
+# Ricapitoliamo
+- **Motivazioni**: perchè utilizzare la struttura struct?
+- **Concetto**: raggruppare più dati correlati sotto un unico nome.
+- **Differenza** tra una struct e una variabile di tipo struct
+- **Dichiarazione** di una struct e successiva valorizzazione
+
+#### Domande guida
+- Perché è utile usare una struct invece di tante variabili separate?
+- Come si dichiara una struct e come si valorizzano i suoi campi?
+- Come posso creare un array di struct e accedere ai singoli campi?
+- Come passo una struct o un array di struct a una funzione per leggerla o modificarla?
 
 [Esercizi](../ex/struct)
 

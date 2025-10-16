@@ -190,5 +190,14 @@ int main() {
 
 ---
 
+## Ricapitoliamo
+
+- Una **variabile** è un contenitore per memorizzare dati durante l'esecuzione del programma.
+- Ogni variabile ha un **tipo** che definisce il tipo di dato che può contenere (es. `int`, `double`, `char`, `bool`, `string`).
+- Prima di usare una variabile, bisogna **dichiararla** specificando il tipo e il nome.
+- L'**assegnazione** (`=`) assegna un valore alla variabile, sempre da destra verso sinistra.
+- Non si possono assegnare valori di tipo diverso senza conversione esplicita.
+- Assegnare una variabile a un'altra copia il valore, non la variabile stessa.
+- Attenzione agli **errori comuni** come usare variabili non inizializzate o assegnare tipi incompatibili.
 
 [Prossima lezione](3-operatori_e_espressioni)

@@ -1,7 +1,7 @@
 ---
 title: Cicli
 layout: default
-nav_order: 6
+nav_order: 12
 parent: Coding in C++
 ---
 # I cicli, le ripetizioni, le ripetizioni, le ripetizioni
@@ -188,5 +188,19 @@ x vale: 1
 
 ---
 
+# Ricapitoliamo
+- **Ciclo `for`**: usato quando si conosce il numero di iterazioni; include inizializzazione, condizione e aggiornamento in un'unica struttura.
+- **Ciclo `while`**: continua finché una condizione è vera; la condizione è controllata prima di ogni iterazione.
+- **Ciclo `do-while`**: simile al `while`, ma il corpo del ciclo viene eseguito almeno una volta perché la condizione viene valutata dopo.
+
+#### Domande guida
+- Come faccio a ripetere un’azione più volte finché una condizione non cambia? Es. propongo un menù all’utente, finché non sceglie di uscire
+- Come posso evitare che un ciclo diventi infinito?
+- Come posso assicurarmi che la variabile di controllo venga aggiornata correttamente?
+- In quali casi è meglio usare un ciclo `do-while` rispetto a un `while`?
+- Come posso verificare che la condizione del ciclo sia corretta per il numero di iterazioni desiderato?
+- Cosa succede se modifico la variabile di controllo dentro il corpo del ciclo in modi non previsti?
+- Come posso usare i cicli per scorrere elementi di un array o di una lista?
+- Come posso interrompere un ciclo prima che la condizione diventi falsa?
 
 [Prossima lezione](5-funzioni)

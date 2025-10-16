@@ -1,7 +1,7 @@
 ---
 title: Controllo di flusso
 layout: default
-nav_order: 5
+nav_order: 11
 parent: Coding in C++
 ---
 # Controllo di flusso
@@ -318,11 +318,19 @@ switch (giorno) {
 
 ---
 
-# Sommario
+# Ricapitoliamo
 
-- Usa `if`, `else if`, `else` e `switch` per prendere decisioni.
-- Fai attenzione ai principali errori: confusione tra `=` e `==`, `else` senza `if`, dimenticare il `break` nello `switch`.
-- Commenta sempre il tuo codice e prova a scrivere piccoli esempi per capire come funzionano questi costrutti!
+
+- `If` / `Else` → scelta tra quale blocco di codice eseguire, in base a una determinata condizione
+- `Switch` / `Case` → permette di scegliere quale blocco di codice eseguire tra più opzioni possibili, in base al valore di una variabile o di un’espressione.
+    - Utilizzo del `break` evita di eseguire i casi successivi “per sbaglio”.
+    - `default` gestisce i casi non previsti.
+
+**Domande guida**
+- Come faccio a eseguire un blocco di codice solo se una certa condizione è vera?
+- Come scelgo tra più opzioni possibili in base al valore di una variabile?
+- Cosa succede se dimentico il break in uno switch?
+- A cosa serve il default in uno switch e cosa succede se non c’è?
 
 [Esercizi Switch Case e Do-while](../ex/switch-case)
 

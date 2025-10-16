@@ -1,7 +1,7 @@
 ---
 title: Funzioni
 layout: default
-nav_order: 7
+nav_order: 13
 parent: Coding in C++
 ---
 # Funzioni
@@ -299,5 +299,27 @@ Questo codice continuerà a chiamare `fattoriale(-1)`, `fattoriale(-2)`, ecc. fi
 
 - Quando il problema può essere **spezzato in sottoproblemi simili all’originale**.  
 - Quando si vuole una soluzione **più leggibile** ed elegante rispetto a quella con cicli `for` e `while`.  
+
+
+# Ricapitoliamo
+- **Concetto**: sequenze ordinate di elementi dello stesso tipo.
+- **Accesso**: array[i] → i parte da 0.
+- **Scansione** / **iterazione** → sempre necessario un ciclo (for/while) per scorrere tutti gli elementi
+
+#### Operazioni comuni
+- Somma o media
+- Ricerca minimo / massimo
+- Conteggio elementi che soddisfano una condizione
+- Modifica/scambio elementi di un array
+
+#### Domande guida
+- Come accedo a un elemento specifico di un array?
+- Come posso scorrere tutti gli elementi di un array usando un ciclo?
+- Come trovo il valore minimo o massimo in un array?
+- Come calcolo la somma o la media di tutti gli elementi?
+- Come posso contare quanti elementi soddisfano una certa condizione (es. pari, multipli di 4)?
+- Come modifico un elemento specifico o scambio due elementi di un array?
+- Come trovo il primo elemento che soddisfa una condizione specifica?
+- Come posso rilevare il primo numero mancante in una sequenza ordinata?
 
 [Prossima lezione](6-leggibilita)

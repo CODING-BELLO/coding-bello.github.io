@@ -1,7 +1,7 @@
 ---
 title: Matrici
 layout: default
-nav_order: 11
+nav_order: 17
 parent: Coding in C++
 ---
 
@@ -149,10 +149,31 @@ La differenza è che possiamo modificare le dimensioni anche in esecuzione.
 
 ---
 
-### In sintesi
+
+# Ricapitoliamo
+
 
 Le **matrici** estendono il concetto di array a più dimensioni, permettendo di gestire dati strutturati come tabelle o griglie.  
 Quando i dati sono bidimensionali e di dimensione nota, usa una matrice.  
 Se invece hai bisogno di una struttura più flessibile, un **vector di vector** è la scelta migliore.
+
+- **Concetto**: array bidimensionali → righe e colonne.
+- **Accesso**:
+    - accedere alle **righe** di una matrice
+    - accedere alle **colonne** di una matrice
+- **Scansione** / **iterazione** → sempre necessari **2 cicli annidati** per scorrere tutti gli elementi che compongono righe e colonne
+
+#### Operazioni comuni
+- Somma di tutti gli elementi
+- Somma diagonale principale: elementi [i][j] dove i = j
+- Conteggio di elementi secondo una condizione
+
+
+#### Domande guida
+- Come accedo a un elemento specifico di una matrice?
+- Come scansiono tutte le righe e le colonne di una matrice usando cicli annidati?
+- Come posso sommare tutti gli elementi di una matrice?
+- Come sommo solo gli elementi della diagonale principale?
+- Come conto quanti elementi soddisfano una certa condizione all’interno della matrice?
 
 [Prossima lezione](10-algoritmi)
