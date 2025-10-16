@@ -154,3 +154,5 @@ La differenza è che possiamo modificare le dimensioni anche in esecuzione.
 Le **matrici** estendono il concetto di array a più dimensioni, permettendo di gestire dati strutturati come tabelle o griglie.  
 Quando i dati sono bidimensionali e di dimensione nota, usa una matrice.  
 Se invece hai bisogno di una struttura più flessibile, un **vector di vector** è la scelta migliore.
+
+[Prossima lezione](10-algoritmi)

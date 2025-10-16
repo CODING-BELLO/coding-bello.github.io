@@ -163,4 +163,4 @@ std::cout << numeri[0] << std::endl; // stampa 5, il primo elemento
 
 [Esercizi su array e scansioni](../ex/array)
 
-[Prossima lezione](9-algoritmi)
+[Prossima lezione](9-strutture-dati-base-matrici)

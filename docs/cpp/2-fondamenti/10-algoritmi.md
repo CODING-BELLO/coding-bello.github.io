@@ -149,4 +149,4 @@ int main() {
 
 La differenza principale è che la versione iterativa usa un ciclo `while`, mentre quella ricorsiva chiama la funzione più volte, riducendo l’intervallo ogni volta.
 
-[Prossima lezione](../3-advanced/1-puntatori.md)
+[Prossima lezione](../3-advanced/1-puntatori)
