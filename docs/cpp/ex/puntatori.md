@@ -8,36 +8,6 @@ nav_exclude: true
 
 # Esercizi di Lettura Codice - Puntatori in C++
 
-## **Esercizio 1**
-
-**Domanda:** Il seguente programma compila ed esegue? Cosa stampa? Spiega la differenza tra passaggio del puntatore per valore e passaggio per riferimento.
-
-```cpp
-#include <iostream>
-using namespace std;
-
-void modificaPuntatore(int* p) {
-    int val = 10;
-    p = &val;  // modifica solo la copia locale del puntatore
-}
-
-void modificaPuntatoreRiferimento(int*& p) {
-    int val = 20;
-    p = &val;  // modifica il puntatore originale
-}
-
-int main() {
-    int x = 5;
-    int* ptr = &x;
-    modificaPuntatore(ptr);
-    cout << *ptr << endl;  // Cosa stampa qui?
-    modificaPuntatoreRiferimento(ptr);
-    cout << *ptr << endl;  // E qui?
-    return 0;
-}
-```
-
-***
 
 ## **Esercizio 2**
 
