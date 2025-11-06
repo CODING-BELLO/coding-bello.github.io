@@ -7,19 +7,19 @@ parent: Coding in C++
 
 # Puntatori in C++
 
-I puntatori sono una dei costrutti fondamentali del linguaggio C++ e permettono di lavorare direttamente con gli indirizzi di memoria. Comprendere i puntatori è essenziale per gestire la memoria, ottimizzare il codice e comprendere concetti avanzati come il passaggio per riferimento.
+## Cos'è un puntatore?
+
+Un puntatore è una variabile che contiene l'**indirizzo di memoria** di un'altra variabile. In altre parole, invece di contenere un valore diretto, il puntatore "punta" a un indirizzo dove è memorizzato un valore.
 
 ## Motivazioni
 
-In C++, la gestione della memoria è manuale e diretta, a differenza di linguaggi più "alti" che si occupano automaticamente di allocare e liberare la memoria. Questo significa che il programmatore ha il controllo completo su come e dove i dati vengono memorizzati. I puntatori sono lo strumento che permette di manipolare gli indirizzi di memoria in modo preciso e flessibile. Grazie ai puntatori, è possibile creare strutture dati dinamiche, passare grandi quantità di dati alle funzioni senza copiarli, solamente passando l'indirizzo di memoria giusto. Questo si rivela molto utile soprattutto nel caso in cui ci troviamo a programmare ambienti dove le risorse sono scarse, come un microcontrollore con memoria limitata
+Nel linguaggio C++ la gestione della memoria è manuale e diretta, a differenza di linguaggi più ad alto livello (python, java) che si occupano automaticamente di gestirla. Questo significa che il programmatore ha il controllo completo su come e dove i dati vengono memorizzati. 
+
+Grazie ai puntatori, è possibile gestire grandi quantità di dati senza copiarli, solamente riferendosi all'indirizzo di memoria giusto. Questo si rivela molto utile soprattutto nel caso in cui ci troviamo a programmare ambienti dove le risorse sono scarse, come un microcontrollore con memoria limitata.
 
 
-## Cos'è un puntatore?
-
-Un puntatore è una variabile che contiene l'indirizzo di memoria di un'altra variabile. In altre parole, invece di contenere un valore diretto, il puntatore "punta" a un indirizzo dove è memorizzato un valore.
-
-### Sintassi base
-
+## Sintassi base
+Nel seguente esempio viene istanziata la variabile intera x con valore 10 e un puntatore p, il quale "punta" all'indirizzo della variabile x.
 ```cpp
 int x = 10;
 int* p = &x;  // p è un puntatore a un intero, che contiene l'indirizzo di x
@@ -29,23 +29,43 @@ int* p = &x;  // p è un puntatore a un intero, che contiene l'indirizzo di x
 - `&x` restituisce l'indirizzo di `x`.
 - `p` ora contiene l'indirizzo di `x`.
 
+### Usare il valore puntato
+
+Per accedere o modificare il valore a cui punta un puntatore, si usa l'operatore `*`:
+
+```cpp
+cout << x << endl;   // Stampa 10
+cout << *p << endl;  // Stampa ancora 10
+```
+
+Utilizzare invece il puntatore senza `*`, significa riferirsi al suo indirizzo di memoria
+
+```cpp
+cout << p << endl;  // Stampa l'indirizzo di memoria a cui il puntatore si riferisce
+cout << *p  << endl;   // Stampa il valore presente all'indirizzo di memoria a cui il puntatore si riferisce
+```
+
+### Considerazioni
+Dal momento che la variabile p, "punta" allo stesso indirizzo di memoria della variabile x, **modificare uno dei due valori modificherà anche l'altro**.
+Le due variabili sono quindi legate insieme.
+
+```cpp
+int x = 10;
+int* p = &x;  // p è un puntatore a un intero, che contiene l'indirizzo di x
+
+x = 20; // modifico il valore di x
+
+cout << x << endl;   // Stampa 20
+cout << *p << endl;  // Stampa ancora 20, è stato modificato anche questo valore
+```
+
 ### Esempio visuale
 
 ![Rappresentazione visuale di un puntatore a un intero](1-puntatori.png)
 
-### Usare il valore puntato
+## Puntatori e struct
 
-Per accedere o modificare il valore a cui punta un puntatore, si usa l'operatore di dereferenziazione `*`:
-
-```cpp
-std::cout << *p << std::endl;  // Stampa 10
-*p = 20;                       // Cambia il valore di x a 20
-std::cout << x << std::endl;   // Stampa 20
-```
-
-## Accesso ai membri di una struct tramite puntatore
-
-Quando si ha un puntatore a una struct, per accedere ai membri della struct si usa l'operatore `->`. Questo operatore è una scorciatoia per dereferenziare il puntatore e accedere al membro in un solo passaggio.
+E' possibile definire un puntatore verso una struct. In questo caso, per accedere ai membri della struct, è necessario utilizzare una sintassi del tipo `(*ptr).x`, in quanto prima dobbiamo riferirci al valore della struct, e poi al campo specifico. Per facilitare l'utilizzo delle struct, è possibile utilizzare l'operatore `->`, come riportato nell'esempio sotto.
 
 Ad esempio, supponiamo di avere una struct semplice:
 
@@ -60,13 +80,13 @@ int main() {
     Punto* ptr = &p;
 
     // Accesso ai membri tramite puntatore usando l'operatore ->
-    std::cout << "x: " << ptr->x << ", y: " << ptr->y << std::endl;
+    cout << "x: " << ptr->x << ", y: " << ptr->y << endl;
 
     // Modifica dei membri tramite puntatore
     ptr->x = 30;
     ptr->y = 40;
 
-    std::cout << "x: " << p.x << ", y: " << p.y << std::endl;
+    cout << "x: " << p.x << ", y: " << p.y << endl;
 
     return 0;
 }
@@ -82,9 +102,9 @@ In questo esempio, `ptr->x` è equivalente a `(*ptr).x`, ma è più comodo e leg
 
 ---
 
-## Aritmetica dei puntatori
+## Puntatori e array
 
-L'aritmetica dei puntatori permette di eseguire operazioni matematiche sugli indirizzi memorizzati nei puntatori. Questo è particolarmente utile per scorrere gli elementi di un array, poiché i puntatori possono essere incrementati o decrementati per spostarsi da un elemento all'altro.
+Gli array sono blocchi di memoria contigua che contengono elementi dello stesso tipo. Poiché un puntatore rappresenta un indirizzo di memoria, incrementarlo o decrementarlo permette di spostarsi tra le celle dell’array, passando così da un elemento all’altro in maniera diretta. Questa operazione rientra nell’aritmetica dei puntatori, che consente di eseguire calcoli sugli indirizzi per navigare facilmente tra gli elementi di un array.
 
 ### Come funziona
 
@@ -106,10 +126,9 @@ int main() {
     int* p = arr;  // p punta al primo elemento dell'array
 
     for (int i = 0; i < 5; ++i) {
-        std::cout << *p << " ";  // Stampa il valore puntato
+        cout << *p << " ";  // Stampa il valore puntato
         p++;                     // Sposta il puntatore all'elemento successivo
     }
-    std::cout << std::endl;
 
     return 0;
 }
@@ -121,15 +140,13 @@ Output:
 ```
 
 
-### Il legame tra array e funzioni: passaggio come puntatore
+### Il legame tra array e funzioni
 
-In C e C++, quando si passa un array a una funzione, in realtà viene passato un puntatore al primo elemento dell'array. Questo perché il nome dell'array, usato come argomento, si "decade" automaticamente in un puntatore al suo primo elemento. 
+Quando si passa un array a una funzione, in realtà NON viene passato l'intero array, ma viene passato un puntatore al primo elemento dell'array. Si dice che l'array "decade" in un puntatore al suo primo elemento. Ecco perchè gli array abbiamo sempre detto che venivano passati per riferimento.
 
-Inoltre, passare un array come `int arr[]` a una funzione è del tutto equivalente a passare `int* arr`. Entrambe le dichiarazioni indicano che la funzione riceve un puntatore al primo elemento dell'array, e non una copia dell'intero array.
+Per questo motivo, è possibile specificare un array in input come `int arr[]` oppure come `int* arr`. Le dichiarazioni sono equivalenti ed entrambe indicano che la funzione riceve un puntatore al primo elemento dell'array, e non l'intero array.
 
-La funzione quindi, non riceve una copia dell'array, ma semplicemente l'indirizzo del suo primo elemento. Di conseguenza, scorrere e modificare un array all'interno di una funzione tramite puntatori è un'operazione naturale ed essenziale.
-
-Ecco due esempi di funzioni che modificano un elemento di un array originale in due modi diversi: usando l'operatore di indice `arr[i]` e usando la dereferenziazione del puntatore `*(arr + i)`.
+Ecco tre esempi di funzioni che modificano un elemento di un array originale in tre modi diversi: usando l'operatore di indice `arr[i]` e usando la dereferenziazione del puntatore `*(arr + i)`.
 
 ```cpp
 #include <iostream>
@@ -161,9 +178,9 @@ int main() {
     modificaConPuntatore(numeri, 4, 77); // Modifica il quinto elemento (indice 4)
 
     for (int i = 0; i < 5; ++i) {
-        std::cout << numeri[i] << " ";
+        cout << numeri[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }
@@ -179,7 +196,7 @@ Come si vede dall'esempio, entrambe le funzioni modificano direttamente il conte
 
 ---
 
-## Passaggio per valore, riferimento e puntatore
+## Funzioni: passaggio per valore, riferimento e puntatore
 
 Quando si passa un argomento a una funzione, si può farlo in tre modi principali:
 
@@ -195,13 +212,13 @@ void incrementa(int n) {
 int main() {
     int x = 5;
     incrementa(x);
-    std::cout << x << std::endl; // Stampa 5, non cambia
+    cout << x << endl; // Stampa 5, non cambia
 }
 ```
 
 ### Passaggio per riferimento
 
-Si passa una "alias" della variabile originale, quindi le modifiche dentro la funzione si riflettono fuori.
+Si passa il riferimento della variabile originale, quindi le modifiche dentro la funzione si riflettono fuori.
 
 ```cpp
 void incrementa(int& n) {
@@ -211,7 +228,7 @@ void incrementa(int& n) {
 int main() {
     int x = 5;
     incrementa(x);
-    std::cout << x << std::endl; // Stampa 6
+    cout << x << endl; // Stampa 6
 }
 ```
 
@@ -221,15 +238,13 @@ Si passa l'indirizzo della variabile. La funzione può modificare il valore punt
 
 ```cpp
 void incrementa(int* n) {
-    if (n != nullptr) {
-        *n = *n + 1;
-    }
+    *n = *n + 1;
 }
 
 int main() {
     int x = 5;
     incrementa(&x);
-    std::cout << x << std::endl; // Stampa 6
+    cout << x << endl; // Stampa 6
 }
 ```
 
@@ -237,22 +252,22 @@ int main() {
 
 ## Puntatori e nullptr
 
-In C++ moderno (C++11+), è buona pratica inizializzare i puntatori a `nullptr` quando non puntano a nulla, per evitare comportamenti indefiniti.
+E' buona pratica inizializzare i puntatori a `nullptr` quando non puntano a nulla, per evitare comportamenti indefiniti.
 
 ```cpp
 int* p = nullptr;  // Puntatore che non punta a nulla
+
+```
+Per verificare che il puntatore punti effettivamente a qualcosa, quindi sia stato "agganciato" a una variabile, è possibile utilizzare il seguente controllo
+```cpp
 if (p) {
-    // Questo blocco non verrà eseguito perché p è nullptr
+    // Si entra qui solo se p non è nullptr
 }
 ```
-
-### Controllare sempre i puntatori
-
-Prima di dereferenziare un puntatore, è importante controllare che non sia `nullptr`:
-
+equivalente a 
 ```cpp
 if (p != nullptr) {
-    std::cout << *p << std::endl;
+    cout << *p << endl;
 }
 ```
 
@@ -260,7 +275,7 @@ if (p != nullptr) {
 
 ## Dangling pointer (puntatori pendenti)
 
-Un dangling pointer è un puntatore che punta a una zona di memoria non più valida, ad esempio perché l'oggetto a cui puntava è stato deallocato o è uscito dallo scope.
+Un dangling pointer è un puntatore che punta a una zona di memoria non più valida, ad esempio perché l'oggetto a cui puntava è stato deallocato o si è usciti dallo scope.
 
 ```cpp
 int* creaPuntatore() {
@@ -271,18 +286,25 @@ int* creaPuntatore() {
 int main() {
     int* p = creaPuntatore();
     // p punta ad una variabile non più valida
-    std::cout << *p << std::endl; // Comportamento indefinito
+    cout << *p << endl; // Comportamento indefinito
 }
 ```
 
----
 
-## Riassunto e best practice
+## Ricapitoliamo
 
-- Usare sempre `nullptr` per inizializzare puntatori non assegnati.
-- Controllare i puntatori prima di usarli.
-- Evita dangling pointer non mantenendo riferimenti a variabili locali fuori dallo scope (non dichiarate nel main o globalmente).
-- I puntatori possono essere usati per lavorare con array, considerando la struttura a indirizzi adiacenti degli array.
+- **Puntatori:** variabili che contengono l'indirizzo di memoria di un'altra variabile.  
+- **Accesso al valore:** usare l'operatore `*`; senza `*` si ottiene l'indirizzo di memoria.  
+- **Puntatori e struct:** accedere ai membri con `(*ptr).campo` o, più comodamente, con `ptr->campo`.  
+- **Array e puntatori:** gli array sono blocchi contigui in memoria; un puntatore può scorrerli usando `p++`, `p--` o `p + i`.  
+- **Array nelle funzioni:** passare un array equivale a passare un puntatore al primo elemento; `int arr[]` e `int* arr` sono equivalenti.  
+- **Passaggio argomenti a funzioni:**  
+  - **Per valore:** la funzione riceve una copia, l'originale non cambia.  
+  - **Per riferimento:** la funzione modifica direttamente la variabile originale.  
+  - **Per puntatore:** si passa l'indirizzo; la funzione può modificare il valore puntato.  
+- **Inizializzare a nullptr:** evitare comportamenti indefiniti quando il puntatore non punta a nulla.  
+- **Controllo di validità:**  controllare che un puntatore non sia null.
+- **Dangling pointer:** puntatore che punta a memoria non più valida, ad esempio quando la variabile a cui puntava esce dallo scope.
 
 ---
 
