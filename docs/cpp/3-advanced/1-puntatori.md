@@ -1,7 +1,7 @@
 ---
 title: Puntatori
 layout: default
-nav_order: 32
+nav_order: 31
 parent: Coding in C++
 ---
 
@@ -313,4 +313,4 @@ int main() {
 
 ## Prossima lezione
 
-[2 - Oggetti](2-oggetti)
+[Stack e Heap](1-stack-heap)

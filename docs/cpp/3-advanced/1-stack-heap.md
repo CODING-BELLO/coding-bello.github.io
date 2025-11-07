@@ -1,7 +1,7 @@
 ---
 title: Stack e Heap
 layout: default
-nav_order: 31
+nav_order: 32
 parent: Coding in C++
 ---
 
@@ -49,6 +49,19 @@ Nei programmi molto semplici, o su computer moderni con tanta RAM, questi sprech
 
 Più avanti verranno introdotti strumenti per gestire questa memoria in modo corretto e sicuro.
 
+### Attenzione importante: dangling pointer
+
+Se dentro una funzione dichiari una variabile locale sullo stack e provi a ritornare un puntatore verso quella variabile, quel puntatore diventa immediatamente pericoloso. Quando la funzione termina, lo stack frame viene distrutto e quella variabile non esiste più.
+
+```cpp
+int* crea() {
+    int x = 10;
+    return &x;   // ERRORE: x era sullo stack, fuori da questa funzione non esiste più
+}
+```
+
+Il puntatore che ritorna non punta più ad una memoria valida → questo si chiama *dangling pointer* e porta a undefined behavior.
+
 ---
 
 ## Concetto chiave
@@ -61,6 +74,64 @@ Non tutta la memoria vive allo stesso modo: alcune variabili vivono automaticame
 
 ---
 
+### Esempio pratico di funzioni: stack vs heap
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// funzione che ritorna un puntatore a variabile sullo stack
+int* creaStack() {
+    int x = 42;        // vive nello stack
+    return &x;         
+}
+
+// funzione che ritorna un puntatore a variabile nell'heap
+int* creaHeap() {
+    int* p = new int(99); // vive nell'heap
+    return p;             // ok, rimane valida finché non facciamo delete
+}
+
+int main() {
+    int* pStack = creaStack();
+    int* pHeap  = creaHeap();
+
+    cout << "Valore stack: " << *pStack << endl; // comportamento indefinito
+    cout << "Valore heap: " << *pHeap << endl;   // stampa correttamente 99
+}
+```
+
+Nell'esempio sopra:
+- `creaStack()` ritorna un puntatore a una variabile sullo stack → questo porta a *dangling pointer*.
+- `creaHeap()` ritorna un puntatore a una variabile nell'heap → funziona correttamente 
+
+Questo mostra chiaramente la differenza di *lifetime*: le variabili sullo stack vivono solo durante la funzione, mentre quelle nell'heap rimangono finché non le liberiamo manualmente.
+
+---
+
+### Soluzione preferibile: tornare un valore invece di un puntatore
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// funzione che ritorna un valore direttamente
+int creaValore() {
+    int x = 42; // vive nello stack, ma viene copiato nel return
+    return x;   // sicuro, non c'è dangling pointer
+}
+
+int main() {
+    int valore = creaValore();
+    cout << "Valore restituito: " << valore << endl; // stampa correttamente 42
+}
+```
+
+In questo caso:
+- La variabile `x` vive nello stack, ma viene **copiata** nel momento del return.
+- Non ci sono puntatori coinvolti → niente dangling pointer.
+- Questa è la soluzione più sicura e consigliata in C++ quando possibile, perché sfrutta lo stack in modo automatico e sicuro.
+
 ## Prossima lezione
 
-[1 - Puntatori](1-puntatori)
+[2-oggetti](2-oggetti)
