@@ -309,8 +309,5 @@ int main() {
 - **Controllo di validità:**  controllare che un puntatore non sia null.
 - **Dangling pointer:** puntatore che punta a memoria non più valida, ad esempio quando la variabile a cui puntava esce dallo scope.
 
----
 
-## Prossima lezione
-
-[Stack e Heap](1-stack-heap)
+[Prossima lezione](1-stack-heap)
