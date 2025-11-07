@@ -191,8 +191,11 @@ Output:
 1 66 99 4 77 
 ```
 
+### Considerazione
+Abbiamo detto che un array non viene mai passato in input a una funzione, ma viene passato un puntatore al primo elemento dell'array. Nell'esercizio precedente inoltre, abbiamo notato come per la sintassi per accedere all'array `arr[indice]` è totalmente equivalente a `*(arr + indice)`.
 
-Come si vede dall'esempio, entrambe le funzioni modificano direttamente il contenuto dell'array originale, dimostrando che passare un array a una funzione equivale a passare un puntatore al suo primo elemento.
+Questo significa quindi che se ho un puntatore `p`, posso accedere al suo valore sia con `*p` che con `p[0]`, perché `p[0]` non è altro che `*(p + 0)`. Non dipende dal fatto che p punti ad un array o meno: C++ non ha metadata sugli array, fa pura aritmetica sugli indirizzi.
+
 
 ---
 
