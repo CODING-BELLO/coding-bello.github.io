@@ -114,10 +114,30 @@ Serve per inizializzare correttamente lo stato di uno studente al momento della 
 Utilizzo
 ```cpp
 int main() {
-    Studente s("Luca", 17, 8.5); // 👈 costruttore chiamato qui
+    Studente s("Luca", 17, 8.5); // costruttore chiamato qui
     cout << s.getNome() << ", " << s.getEta() << " anni, media " << s.getMedia();
 }
 ```
+
+## Distruttore di una Classe
+Un distruttore è un metodo speciale che viene chiamato automaticamente quando l’oggetto sta per essere distrutto (fine dello scope / fine della funzione / fine del programma). Serve per definire cosa deve accadere quando l’oggetto “finisce la sua vita”, ed eventualmente chiudere / liberare eventuali risorse usate dall'oggetto (sempre per il discorso che C++ è un linguaggio a basso livello in cui è il programmatore che deve gestire la memoria)
+
+Se non scriviamo noi un distruttore, il compilatore ne genera comunque uno di default. Quindi gli oggetti che creiamo normalmente, quando escono dallo scope, vengono distrutti automaticamente.
+
+```cpp
+class Persona {
+public:
+    Persona() {
+        cout << "Creo Persona" << endl;
+    }
+
+    ~Persona() {
+        cout << "Distruggo Persona" << endl;
+    }
+};
+```
+
+Possiamo quindi intendere l’oggetto come qualcosa che **nasce (costruttore)** e **muore (distruttore)**. Per ora basta sapere che il distruttore serve a definire cosa succede quando l’oggetto termina.
 
 ## Metodi di una classe
 I metodi definiscono il comportamento dell’oggetto, ovvero cosa può fare uno Studente.
