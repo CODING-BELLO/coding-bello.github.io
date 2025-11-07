@@ -1,5 +1,5 @@
 ---
-title: Puntatori
+title: Stack e Heap
 layout: default
 nav_order: 31
 parent: Coding in C++
