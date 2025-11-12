@@ -13,10 +13,9 @@ In C++ la memoria dei nostri programmi viene principalmente gestita in due zone:
 
 | Zona | Chi la gestisce | Quando viene allocata | Quando viene liberata |
 |------|-----------------|------------------------|------------------------|
-| **Stack** | il compilatore | quando una variabile entra nello scope | automaticamente quando esce dallo scope |
-| **Heap** | il programmatore (manuale) | quando viene usata una `new` | deve essere liberata manualmente (`delete`) |
+| **Stack** | il compilatore | quando viene dichiarata una variabile nello scope | automaticamente quando esce dallo scope |
+| **Heap** | il programmatore (manuale) | quando viene usata la keyword `new` | manualmente tramite keyword `delete` |
 
----
 
 ## Stack
 
@@ -40,8 +39,22 @@ Lo stack è perfetto per variabili locali e oggetti che "vivono" solamente dentr
 
 ## Heap
 
+
 Nell'heap la memoria viene richiesta e gestita in modo dinamico.  
 Questa zona è utile quando servono dati che non devono sparire appena termina una funzione, ma devono restare disponibili più a lungo.
+
+Per allocare memoria nell’**heap**, in C++ si utilizza l’operatore `new`.  
+Questo operatore crea dinamicamente un’area di memoria e restituisce un **puntatore** al tipo richiesto.
+
+```cpp
+int* p = new int;     // alloca un intero nell'heap
+*p = 5;               // assegna un valore
+cout << *p << endl;   // stampa 5
+
+delete p;             // libera la memoria
+```
+
+> Ricorda: ogni `new` deve avere un corrispondente `delete`, altrimenti si genera un *memory leak*.
 
 Se però la memoria non viene restituita correttamente al sistema, rimane occupata e inutilizzabile fino a fine programma. Questo problema si chiama *memory leak*.
 

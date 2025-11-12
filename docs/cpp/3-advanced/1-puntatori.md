@@ -208,13 +208,13 @@ Quando si passa un argomento a una funzione, si può farlo in tre modi principal
 La funzione riceve una copia del valore, quindi modifiche all'interno della funzione non influenzano la variabile originale.
 
 ```cpp
-void incrementa(int n) {
-    n = n + 1;
+int incrementa(int n) {
+    return n + 1;
 }
 
 int main() {
     int x = 5;
-    incrementa(x);
+    x = incrementa(x);
     cout << x << endl; // Stampa 5, non cambia
 }
 ```
@@ -309,5 +309,5 @@ int main() {
 - **Controllo di validità:**  controllare che un puntatore non sia null.
 - **Dangling pointer:** puntatore che punta a memoria non più valida, ad esempio quando la variabile a cui puntava esce dallo scope.
 
-
+[Esercizi](../ex/puntatori.md)
 [Prossima lezione](1-stack-heap)

@@ -9,9 +9,10 @@ nav_exclude: true
 # Esercizi di Lettura Codice - Puntatori in C++
 
 
-## **Esercizio 2**
 
-**Domanda:** Cosa stampa questo programma? Spiega il significato di `*` e `&` nel contesto della dichiarazione e dell'uso di puntatori.
+## **Esercizio di comprensione**
+
+Inserire all'interno delle stringhe di stampa ciò che stampa effettivamente il cout. Abbozzarlo prima di eseguire il codice
 
 ```cpp
 #include <iostream>
@@ -20,119 +21,117 @@ using namespace std;
 int main() {
     int a = 7;
     int* p = &a;
-    cout << "a = " << a << endl;
-    cout << "*p = " << *p << endl;
-    cout << "&a = " << &a << endl;
-    cout << "p = " << p << endl;
-    cout << "&p = " << &p << endl;
+    cout << " Valore della variabile a: " << a << endl;
+    cout << " Valore puntato da p: " << *p << endl;
+    cout << " ... " << &a << endl;
+    cout << " ... " << p << endl;
+    cout << " ... " << &p << endl;
+
+    int arr[] = {1, 34, 2, 29};
+    int* parr = arr;
+
+    cout << " ... " << *parr << endl;
+    cout << " ... " << parr << endl;
+    cout << " ... " << &arr[0] << endl;
+    cout << " ... " << &arr << endl;
+    cout << " ... " << *(parr + 1) << endl;
+
     return 0;
 }
 ```
 
 ***
 
-## **Esercizio 3**
+## **Esercizi di scrittura e applicazione con i puntatori**
 
-**Domanda:** Il seguente codice compila? Qual è il problema? Spiega cosa succede con il puntatore `p` e la variabile locale `val`.
+
+**Esercizio 2 – Somma degli elementi di un array**  
+Scrivere una funzione che calcoli la somma di tutti gli elementi di un array l’aritmetica dei puntatori (`*p`, `p++`, ecc.).
 
 ```cpp
-#include <iostream>
-using namespace std;
-
-int* creaPuntatore() {
-    int val = 100;
-    return &val;
-}
-
-int main() {
-    int* p = creaPuntatore();
-    cout << *p << endl;  // Cosa succede qui?
-    return 0;
-}
+int sommaArray(int* arr, int dim);
 ```
 
-***
+---
 
-## **Esercizio 4**
+**Esercizio 3 - Struct e puntatori**
 
-**Domanda:** Cosa stampa il seguente programma? Spiega la differenza tra `arr`, `&arr`, e `*arr` in relazione agli array e ai puntatori.
+Il seguente codice definisce una struttura ContoBancario che rappresenta un conto corrente.
+Nel main() viene istanziato un conto specifico e creato un puntatore a esso.
+
+Si vuole scrivere una funzione preleva() esterna al main, che riceva come parametro un puntatore a ContoBancario e un importo da prelevare, e modifichi il saldo del conto decrementandolo solo se il saldo è sufficiente.
+
+Se l’importo da prelevare è maggiore del saldo disponibile, la funzione deve:
+- stampare un messaggio di errore: "Saldo insufficiente"
+- non modificare il saldo
+
+Completare il codice inserendo l’implementazione della funzione preleva() e la relativa chiamata nel main().
+
 
 ```cpp
 #include <iostream>
 using namespace std;
 
+struct ContoBancario {
+    int numeroConto;
+    string intestatario;
+    float saldo;
+};
+
+// Implementare funziona
+void preleva(ContoBancario* conto, float importo);
+
 int main() {
-    int arr[3] = {10, 20, 30};
-    cout << "arr = " << arr << endl;
-    cout << "&arr = " << &arr << endl;
-    cout << "*arr = " << *arr << endl;
-    cout << "arr[0] = " << arr[0] << endl;
-    cout << "*(&arr[0]) = " << *(&arr[0]) << endl;
+    ContoBancario c1 = {12345, "Mario Rossi", 250.50};
+    ContoBancario* pc = &c1;
+
+    cout << "Saldo iniziale di " << pc->intestatario << ": " << pc->saldo << " €" << endl;
+
+    // TODO: chiama la funzione per prelevare una certa somma
+    // preleva(...);
+
+    cout << "Saldo dopo il prelievo: " << pc->saldo << " €" << endl;
+
     return 0;
 }
+
 ```
 
-***
 
-## **Esercizio 5**
+**Esercizio 4 – Scambio di due variabili**  
+Scrivere una funzione che scambi due variabili usando solo puntatori.
 
-**Domanda:** Il seguente programma compila ed esegue? Cosa stampa? Spiega il comportamento di `p = p + 1` e `*p++`.
+```cpp
+void scambia(int* a, int* b);
+```
+
+
+
+**Esercizio 5 – Allocazione dinamica con new**
+
+Scrivere un programma che:
+1. Chieda all'utente di inserire la dimensione di un array di interi.  
+2. Allochi dinamicamente un puntatore ad array.
+3. Permetta all'utente di inserire i valori dell'array.
 
 ```cpp
 #include <iostream>
 using namespace std;
 
 int main() {
-    int arr[3] = {1, 2, 3};
-    int* p = arr;
-    cout << *p << endl;    // Cosa stampa?
-    p = p + 1;
-    cout << *p << endl;    // Cosa stampa ora?
-    cout << *p++ << endl;  // Cosa stampa? E cosa succede a p?
-    cout << *p << endl;    // Cosa stampa qui?
-    return 0;
-}
-```
+    int n;
+    cout << "Quanti numeri vuoi inserire? ";
+    cin >> n;
 
-***
+    // TODO: Creare un puntatore a un array di interi -> necessario capire come fare (guardare sezione Stack e Heap)
 
-## **Esercizio 6**
-
-**Domanda:** Cosa succede se si dereferenzia un puntatore nullo? Il seguente codice compila? Cosa succede in fase di esecuzione?
-
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-    int* p = nullptr;
-    if (p != nullptr) {
-        cout << *p << endl;
-    } else {
-        cout << "Puntatore nullo, non si può dereferenziare." << endl;
+    cout << "Inserisci " << n << " numeri:" << endl;
+    for (int i = 0; i < n; i++) {
+        // TODO: leggi un numero da tastiera e salvalo nell’array
     }
+
+    // TODO: liberare la memoria...
+    
     return 0;
 }
 ```
-
-***
-
-## **Esercizio 7**
-
-**Domanda:** Il seguente codice contiene un “trabocchetto”. Cosa stampa? Spiega il comportamento del puntatore e la modifica del valore puntato.
-
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-    int x = 5;
-    int* p = &x;
-    *p++ = 10;
-    cout << "x = " << x << endl;
-    cout << "*p = " << *p << endl;
-    return 0;
-}
-```
-
-***
