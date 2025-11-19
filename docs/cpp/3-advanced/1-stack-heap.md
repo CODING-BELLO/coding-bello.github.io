@@ -145,4 +145,4 @@ In questo caso:
 - Non ci sono puntatori coinvolti → niente dangling pointer.
 - Questa è la soluzione più sicura e consigliata in C++ quando possibile, perché sfrutta lo stack in modo automatico e sicuro.
 
-[Prossima lezione](2-oggetti)
+[Prossima lezione](./oggetti/2-1-oggetti)

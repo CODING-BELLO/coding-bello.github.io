@@ -3,16 +3,8 @@ title: Home
 layout: home
 nav_exclude: true
 ---
-# Ciao!
+### Hello, world!
 
-Questo sito contiene contenuti didattici riguardanti informatica e programmazione
+Meme perchè non so cosa scrivere in questa pagina iniziale
 
-#### WIP
-
-<!-- Ancora tutto work in progress, se capiti qui abbi pazienza, stiamo lavorando <3 
-
-[Considerazioni sul coding se sei preoccupato (ma anche se non lo sei)](docs/1-coding-difficile)
-
-[Coding in C++](docs/cpp/)
-
-[Coding in Python](docs/py/) -->
+![descrizione](images/memecpp.jpg)

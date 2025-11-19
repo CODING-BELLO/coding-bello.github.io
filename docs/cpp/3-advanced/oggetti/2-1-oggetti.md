@@ -1,5 +1,5 @@
 ---
-title: Programmazione a oggetti
+title: Programmazione a oggetti 1
 layout: default
 nav_order: 33
 parent: Coding in C++
@@ -34,9 +34,6 @@ Man mano che i software prendevano sempre più piede, si inizarono a riscontrare
 - difficoltà nella manutenzione e nella modifica
 - difficoltà di riutilizzare pezzi di codice in contesti diversi (parti diverse del programma)
 - forte dipendenza funzioni e dati
-
-
-# Dalla teoria alla pratica con C++
 
 
 ## Definizione di una classe
@@ -143,9 +140,9 @@ Possiamo quindi intendere l’oggetto come qualcosa che **nasce (costruttore)** 
 I metodi definiscono il comportamento dell’oggetto, ovvero cosa può fare uno Studente.
 
 E' possibile utilizzare i metodi per:
-	•	modificare lo stato interno dell'oggetto (aggiornare la media)
-	•	restituire informazioni (stampare i dati)
-	•	implementare logiche più complesse (calcoli, ecc.)
+- modificare lo stato interno dell'oggetto (aggiornare la media)
+- restituire informazioni (stampare i dati)
+- implementare logiche più complesse (calcoli, ecc.)
 
 
 ## Visibilità degli attributi di una Classe
@@ -211,55 +208,26 @@ public:
 Attraverso questa implementazione, abbiamo protetto eta e media da valori che non ci piacciono. Se qualcuno vuole impostare "eta" con un numero minore di zero, non potrà farlo, così come inserire una media che non rientra nell'intervallo 1 - 10.
 
 
+
+
 >**Misconcezione comune**: private serve solo a non far vedere le cose
 Il punto di mettere private sulle variabile, non è per rendere oscuro o nascondere il valore delle variabili da occhi indiscreti, ma **proteggere l’integrità** dei dati e **definire un’interfaccia dell'oggetto in maniera chiara**. Spesso ci si ritrova a sviluppare in contesti dinamici, con molte persone. Sviluppare una classe con solo alcuni metodi pubblici, significa comunicare alle persone che usano quella classe "ho pensato che voi potete fare questo -> metodi pubblici"
 
 
-## Incapsulamento e visibilità
+## Incapsulamento
 
 **Incapsulamento** significa “racchiudere” dati e funzioni dentro l’oggetto e **controllare l’accesso** a questi dati.
 - `public`: accessibile e modificabile da fuori
 - `private`: accessibile e modificabile solo dall’interno della classe
 
 
-## Ereditarietà: riuso e specializzazione
-
-```cpp
-class Persona {
-public:
-    string nome;
-    int eta;
-
-    void presenta() {
-        cout << "Ciao, sono " << nome << " e ho " << eta << " anni." << endl;
-    }
-};
-
-class Studente : public Persona {
-public:
-    string scuola;
-
-    void presenta() {
-        cout << "Ciao, sono " << nome << ", ho " << eta << " anni e frequento " << scuola << "." << endl;
-    }
-};
-
-int main() {
-    Studente s;
-    s.nome = "Anna";
-    s.eta = 16;
-    s.scuola = "Liceo Scientifico";
-    s.presenta();
-}
-```
-
-# Comparazioni
-## Classe vs Struct
+## Comparazioni
+### Classe vs Struct
 I costrutti di Classe e Struct sono quasi equivalenti dal punto di vista tecnico. Entrambi possono avere uno stato, dei metodi e i costruttori, con l'unica differenza che 
 - **struct**: visibilità public di default, usata per dati semplici, senza incapsulamento
 - **class**: visibilità private di default, usata per oggetti con stato protetto e comportamento
 
-## Classe vs Oggetto
+### Classe vs Oggetto
 
 | **Classe**            | **Oggetto** |
 |------------------------|------------|
@@ -317,7 +285,6 @@ Seguire queste convenzioni aiuta a distinguere facilmente classi e oggetti nel c
 - **Stato di un oggetto**: insieme dei valori delle proprietà in un dato momento.
 - **Costruttori**: metodi speciali per inizializzare oggetti.
 - **Ereditarietà**: permette di creare classi derivate riutilizzando caratteristiche di altre classi.
-- **Polimorfismo** (solo introdotto): capacità di un oggetto di comportarsi in modi diversi in base al contesto, spesso tramite funzioni virtuali (non approfondito qui).
 
 ## Suggerimenti pratici
 
@@ -325,4 +292,4 @@ Seguire queste convenzioni aiuta a distinguere facilmente classi e oggetti nel c
 - Definire chiaramente l’**interfaccia pubblica** della classe (metodi `public`) e mantenere i dati sensibili `private`.
 - Usare l’ereditarietà solo quando ha senso logico, altrimenti preferire la **composizione** (un oggetto dentro un altro).
 
-[Prossima lezione](3-strutture-dati)
+[Prossima lezione](2-2-oggetti-avanzato)
