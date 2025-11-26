@@ -179,9 +179,9 @@ s.media = 54;  // media no sense
 
 E' quindi buona pratica dichiarare tutti gli attributi come private e accedere ai dati solo attraverso metodi (ovviamente pubblici). 
 Questo permette di:
-	•	protegge l’integrità dello stato: nessuno può modificare i dati, se non utilizzando le funzioni che il creatore della classe ha messo a disposizione
-	•	permette di aggiungere controlli senza cambiare il codice utente
-	•	rende più chiara l’interfaccia pubblica
+- proteggere l’integrità dello stato: nessuno può modificare i dati, se non utilizzando le funzioni che il creatore della classe ha messo a disposizione
+- aggiungere controlli senza cambiare il codice utente
+- rendere più chiara l’interfaccia pubblica
 
 ```cpp
 class Studente {
@@ -210,8 +210,10 @@ Attraverso questa implementazione, abbiamo protetto eta e media da valori che no
 
 
 
->**Misconcezione comune**: private serve solo a non far vedere le cose
-Il punto di mettere private sulle variabile, non è per rendere oscuro o nascondere il valore delle variabili da occhi indiscreti, ma **proteggere l’integrità** dei dati e **definire un’interfaccia dell'oggetto in maniera chiara**. Spesso ci si ritrova a sviluppare in contesti dinamici, con molte persone. Sviluppare una classe con solo alcuni metodi pubblici, significa comunicare alle persone che usano quella classe "ho pensato che voi potete fare questo -> metodi pubblici"
+>**Misconcezione comune**: private NON serve a rendere oscura la classe o nascondere il valore delle variabili da occhi indiscreti.
+Il punto di mettere private sulle variabile, è quello di **proteggere l’integrità** dei dati e **definire un’interfaccia chiara** (per interagire con l'oggetto). 
+
+Spesso ci si ritrova a sviluppare in contesti dinamici, con molte persone. Sviluppare una classe con solo alcuni metodi pubblici, significa comunicare alle persone che usano quella classe "ho pensato che voi potete fare questo -> metodi pubblici"
 
 
 ## Incapsulamento
