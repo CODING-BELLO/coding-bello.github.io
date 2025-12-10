@@ -142,4 +142,4 @@ Non c’è nessuna magia nella programmazione: stiamo solo dicendo al compilator
 Stiamo nascondendo la complessità dietro una sintassi più leggibile, ma il comportamento è sempre definito in modo esplicito da noi.
 
 
-[Prossima lezione](2-3-oggetti-avanzato)
+[Prossima lezione](2-3-oggetti-composizione)

@@ -294,4 +294,4 @@ Seguire queste convenzioni aiuta a distinguere facilmente classi e oggetti nel c
 - Definire chiaramente l’**interfaccia pubblica** della classe (metodi `public`) e mantenere i dati sensibili `private`.
 - Usare l’ereditarietà solo quando ha senso logico, altrimenti preferire la **composizione** (un oggetto dentro un altro).
 
-[Prossima lezione](2-2-oggetti-avanzato)
+[Prossima lezione](2-2-oggetti-overloading)

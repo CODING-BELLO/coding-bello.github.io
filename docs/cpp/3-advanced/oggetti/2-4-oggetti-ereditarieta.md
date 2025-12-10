@@ -1,10 +1,10 @@
 ---
-title: Programmazione a oggetti 3
+title: Programmazione a oggetti 4
 layout: default
-nav_order: 35
+nav_order: 36
 parent: Coding in C++
 ---
-# Programmazione a oggetti 3 - Ereditarietà e polimorfismo
+# Programmazione a oggetti 4 - Ereditarietà e polimorfismo
 
 ## Ereditarietà
 
