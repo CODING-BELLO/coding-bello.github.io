@@ -1,7 +1,7 @@
 ---
 title: Algoritmi notevoli
 layout: default
-nav_order: 9
+nav_order: 18
 parent: Coding in Python
 ---
 

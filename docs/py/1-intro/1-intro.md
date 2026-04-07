@@ -1,4 +1,3 @@
-
 ---
 title: Introduzione
 layout: default

@@ -1,7 +1,7 @@
 ---
 title: Strutture dati avanzate
 layout: default
-nav_order: 12
+nav_order: 22
 parent: Coding in Python
 ---
 

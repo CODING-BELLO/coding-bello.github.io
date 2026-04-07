@@ -1,7 +1,7 @@
 ---
 title: Funzioni in Python
 layout: default
-nav_order: 6
+nav_order: 15
 parent: Coding in Python
 ---
 
@@ -70,7 +70,6 @@ print(risultato)
 
 ## Differenza tra `print` e `return`
 
-Questa è importantissima.
 
 ```python
 def esempio1():
@@ -136,4 +135,4 @@ Questa è programmazione vera: prendere uno schema e renderlo riutilizzabile.
 - può restituire un valore con `return`;
 - aiuta a scrivere codice più ordinato, generale e leggibile.
 
-[Prossima lezione](7-strutture_dati-base)
+[Prossima lezione](10-strutture_dati-base)

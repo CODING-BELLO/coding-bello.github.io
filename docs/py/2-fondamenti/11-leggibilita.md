@@ -1,7 +1,7 @@
 ---
 title: Leggibilità del codice
 layout: default
-nav_order: 8
+nav_order: 17
 parent: Coding in Python
 ---
 
@@ -99,4 +99,4 @@ Quando capiamo bene cosa fa ogni parte, troviamo gli errori più facilmente.
 - dividi il problema in parti più piccole;
 - segui uno stile coerente.
 
-[Prossima lezione](9-algoritmi)
+[Prossima lezione](12-algoritmi)

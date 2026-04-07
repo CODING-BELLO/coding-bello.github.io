@@ -2,7 +2,7 @@
 title: Operatori e espressioni
 layout: default
 parent: Coding in Python
-nav_order: 4
+nav_order: 5
 ---
 
 # Operatori ed espressioni

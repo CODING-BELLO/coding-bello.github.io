@@ -1,7 +1,7 @@
 ---
 title: Strutture dati di base in Python
 layout: default
-nav_order: 7
+nav_order: 16
 parent: Coding in Python
 ---
 
@@ -117,4 +117,4 @@ print("kiwi" in frutti)
 - i **dizionari** associano chiavi e valori;
 - queste strutture servono per modellare meglio i dati.
 
-[Prossima lezione](8-leggibilita)
+[Prossima lezione](11-leggibilita)
