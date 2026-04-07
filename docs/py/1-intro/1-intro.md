@@ -1,7 +1,7 @@
 ---
 title: Introduzione
 layout: default
-parent: Coding in Python
+parent: Python
 nav_order: 1
 has_children: true
 ---
