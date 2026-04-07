@@ -7,18 +7,6 @@ parent: Coding in Python
 
 # Cicli e iterazioni
 
-## `while`
-
-Il ciclo `while` ripete un blocco finché una condizione rimane vera.
-
-```python
-contatore = 1
-
-while contatore <= 5:
-    print(contatore)
-    contatore = contatore + 1
-```
-
 ## `for`
 
 In Python il `for` viene spesso usato con `range()`.
@@ -49,27 +37,6 @@ for i in range(0, 10, 2):
     print(i)
 ```
 
-## `break` e `continue`
-
-### `break`
-Interrompe il ciclo.
-
-```python
-for i in range(10):
-    if i == 5:
-        break
-    print(i)
-```
-
-### `continue`
-Salta l'iterazione corrente.
-
-```python
-for i in range(5):
-    if i == 2:
-        continue
-    print(i)
-```
 
 ## Ricapitoliamo
 
