@@ -4,6 +4,7 @@ layout: default
 nav_order: 1
 has_toc: false
 parent: Introduzione all'informatica 
+nav_exclude: true
 ---
 
 # Storia dell’informatica

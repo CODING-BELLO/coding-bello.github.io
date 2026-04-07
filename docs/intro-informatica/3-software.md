@@ -3,6 +3,7 @@ title: Software
 layout: default
 nav_order: 3
 parent: Introduzione all'informatica 
+nav_exclude: true
 ---
 # Introduzione al Software
 

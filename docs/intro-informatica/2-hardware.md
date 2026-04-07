@@ -3,6 +3,7 @@ title: Hardware
 layout: default
 nav_order: 2
 parent: Introduzione all'informatica 
+nav_exclude: true
 ---
 
 # Introduzione all’hardware

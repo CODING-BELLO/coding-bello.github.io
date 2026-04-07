@@ -4,6 +4,7 @@ layout: default
 nav_order: 1
 has_toc: false
 has_children: true
+nav_exclude: true
 ---
 # Cominciamo a parlare di informatica
 
