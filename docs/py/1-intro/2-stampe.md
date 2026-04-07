@@ -7,7 +7,7 @@ nav_order: 2
 
 # Stampe, facciamo parlare il programma
 
-Uno dei primi modi per capire cosa sta facendo un programma è farlo **stampare a schermo**.
+Il modo più veloce di un programma per comunicare è stampare valori.
 
 Stampare significa mostrare testo, numeri o risultati nella console.
 
@@ -72,7 +72,10 @@ print("Età:", eta)       # corretto
 
 ## Le f-string
 
-Un modo molto comodo e moderno per stampare variabili è usare le **f-string**:
+Un modo molto comodo per stampare variabili è usare le **f-string**.
+La lettera `f` sta per **formatted**, cioè "formattata": si tratta infatti di stringhe in cui è possibile inserire direttamente valori o variabili all'interno del testo in modo chiaro e leggibile.
+
+Esempio:
 
 ```python
 nome = "Marco"
@@ -81,16 +84,18 @@ eta = 17
 print(f"Ciao {nome}, hai {eta} anni")
 ```
 
-È un modo super leggibile e spesso è il migliore da usare.
+Le f-string sono spesso molto comode perché permettono di costruire frasi complete in modo semplice, leggibile e ordinato.
 
 ## Commenti
 
-Come in ogni linguaggio, possiamo scrivere commenti per spiegare il codice.
+I commenti sono porzioni di testo NON considerate come parte del programma e quindi ignorate quando il programma stesso viene eseguito. Solitamente si utilizzano per spiegare parti di codice complesso, o appuntarsi velocemente parti ancora non implementate (scritte). 
 
 In Python, i commenti su una riga iniziano con `#`:
 
 ```python
 # Questo è un commento
+# Possiamo scrivere quello che vogliamo ajdnfdjhsbgdjfh
+# Meglio scrivere solo cose sensate :)
 print("Hello world!")
 ```
 

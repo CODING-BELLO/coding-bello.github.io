@@ -10,8 +10,6 @@ Il primo passo per far "parlare" il computer è mostrare messaggi sullo schermo.
 
 La **stampa** è il modo in cui un programma mostra informazioni. Senza la possibilità di stampare, non sarebbe possibile vedere i risultati dei calcoli o il comportamento del codice.
 
-> Solitamente si italianizzano i verbi inglesi legati alla programmazione. In questo caso “print” diventa printare, “debug” diventa debuggare e così via. Chiedete scusa alla prof di inglese e ditele che sono solo modi comodi per parlare di azioni comuni nel coding! <3
-
 ---
 
 ## Come funziona `std::cout`
