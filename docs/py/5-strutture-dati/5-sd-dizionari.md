@@ -1,8 +1,8 @@
 ---
-title: Strutture dati di base
+title: Dizionari
 layout: default
-nav_order: 50
-parent: Coding in Python
+nav_order: 55
+parent: Strutture dati
 ---
 
 # Strutture dati di base in Python
