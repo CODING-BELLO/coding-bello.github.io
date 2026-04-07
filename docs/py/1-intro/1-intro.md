@@ -1,3 +1,4 @@
+
 ---
 title: Introduzione
 layout: default
@@ -8,66 +9,57 @@ has_children: true
 
 # Introduzione a Python
 
-Python è un linguaggio di programmazione creato da **Guido van Rossum** e pubblicato all'inizio degli anni '90.  
-Negli anni è diventato uno dei linguaggi più usati al mondo perché è **leggibile, versatile e potente**.
+Python è un linguaggio di programmazione creato da **Guido van Rossum** e pubblicato all'inizio degli anni '90.
+Nel tempo è diventato uno dei linguaggi più utilizzati al mondo grazie alla sua **semplicità**, alla sua **leggibilità** e alla sua **versatilità**.
 
-Con Python si possono realizzare tante cose diverse, ad esempio:
-- piccoli programmi da console;
-- automazioni e script;
-- applicazioni web;
-- analisi dati;
+Python viene usato in molti ambiti diversi, ad esempio:
+- sviluppo di software;
+- automazione di attività ripetitive;
+- analisi dei dati;
 - intelligenza artificiale;
-- software scientifico;
-- strumenti didattici per imparare a programmare.
+- sviluppo web;
+- didattica della programmazione.
 
-## Perché iniziare da Python
+Uno dei suoi punti di forza è la sintassi chiara: i programmi scritti in Python risultano spesso più facili da leggere e comprendere rispetto a quelli scritti in altri linguaggi.
+Per questo motivo, Python è molto adatto anche a chi inizia a programmare per la prima volta.
 
-Python è ottimo per cominciare perché:
-- ha una sintassi semplice;
-- richiede meno "cerimonie" rispetto ad altri linguaggi;
-- permette di vedere rapidamente il risultato del proprio codice;
-- rende più facile concentrarsi sulla logica.
+## Cominciare a programmare in Python
 
-Questo non significa che Python sia un linguaggio "debole".  
-Significa che toglie attrito all'inizio, così possiamo concentrarci sul cuore della programmazione.
+Per iniziare a programmare in Python sul proprio computer sono necessari due elementi fondamentali:
+- **Python**;
+- un **IDE**.
 
-## Linguaggio interpretato
+### Python
 
-A differenza di linguaggi come C++, Python viene in genere eseguito da un **interprete**.
+Python è il linguaggio vero e proprio, cioè il sistema che permette di scrivere ed eseguire i programmi.
+Installare Python significa installare l'interprete, cioè il programma che legge il codice scritto e lo esegue.
 
-In pratica:
-- noi scriviamo un file `.py`;
-- l'interprete Python legge il codice;
-- il programma viene eseguito.
+Per scaricare Python si può utilizzare il sito ufficiale:
 
-Dal punto di vista scolastico, la differenza importante è questa:
-- in un linguaggio compilato si traduce prima tutto il programma;
-- in Python si esegue tramite l'interprete.
+[Scaricare Python](https://www.python.org/downloads/)
 
-## Cosa serve per programmare in Python
+### IDE
 
-Per iniziare basta davvero poco.
+IDE è l'acronimo di **Integrated Development Environment**, cioè **ambiente di sviluppo integrato**.
+Si tratta di un programma che aiuta a scrivere, organizzare, eseguire e correggere il codice in modo più comodo.
 
-### Editor o IDE consigliati
+Un IDE, in genere, offre strumenti utili come:
+- evidenziazione della sintassi;
+- esecuzione del programma;
+- segnalazione di errori;
+- gestione dei file del progetto.
 
-Puoi usare:
-- **Visual Studio Code**
-- **PyCharm**
-- **IDLE** (molto semplice, spesso incluso con Python)
+Alcune opzioni semplici per iniziare sono:
+- [VS Code](https://code.visualstudio.com/download)
+- [Thonny](https://thonny.org)
 
 ### IDE online
 
-Se non vuoi installare nulla, puoi usare un ambiente online come:
-- **Replit**
-- **Programiz**
-- **Google Colab** (molto comodo, soprattutto per notebook ed esercizi)
+Se non si desidera installare nulla, è possibile utilizzare un ambiente di programmazione online.
+Questa soluzione è utile soprattutto per svolgere prove rapide o per iniziare subito a fare esercizi.
 
-## Una cosa importante: l'indentazione
-
-In Python gli spazi non servono solo a "far bello" il codice.  
-Servono proprio a **definire la struttura del programma**.
-
-Questa cosa all'inizio sembra strana, ma in realtà obbliga a scrivere codice più ordinato e leggibile.
+Un'opzione consigliata è:
+- [OnlineGDB](https://www.onlinegdb.com)
 
 ---
 
