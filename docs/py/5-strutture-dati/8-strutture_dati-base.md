@@ -1,7 +1,7 @@
 ---
-title: Strutture dati di base in Python
+title: Strutture dati di base
 layout: default
-nav_order: 16
+nav_order: 50
 parent: Coding in Python
 ---
 

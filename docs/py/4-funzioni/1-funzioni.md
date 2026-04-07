@@ -1,7 +1,7 @@
 ---
-title: Funzioni in Python
+title: Funzioni
 layout: default
-nav_order: 15
+nav_order: 40
 parent: Coding in Python
 ---
 

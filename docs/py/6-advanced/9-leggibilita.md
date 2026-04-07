@@ -1,5 +1,5 @@
 ---
-title: Leggibilità del codice
+title: Leggibilità
 layout: default
 nav_order: 17
 parent: Coding in Python

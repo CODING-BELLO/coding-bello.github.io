@@ -1,5 +1,5 @@
 ---
-title: Input in python
+title: Input
 layout: default
 parent: Coding in Python
 nav_order: 4

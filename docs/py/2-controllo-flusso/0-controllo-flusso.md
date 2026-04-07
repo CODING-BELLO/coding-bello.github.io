@@ -1,8 +1,8 @@
 ---
-title: If, Else, Elif
+title: Controllo di flusso
 layout: default
-nav_order: 21
-parent: Controllo di flusso
+nav_order: 20
+parent: Coding in Python
 ---
 
 # Controllo di flusso

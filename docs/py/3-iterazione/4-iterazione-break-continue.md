@@ -1,8 +1,8 @@
 ---
-title: Controllo di flusso
+title: Break e continue
 layout: default
-nav_order: 14
-parent: Coding in Python
+nav_order: 33
+parent: Iterazione
 ---
 
 # Cicli e iterazioni

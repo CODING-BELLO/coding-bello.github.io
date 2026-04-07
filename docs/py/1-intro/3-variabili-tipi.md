@@ -1,5 +1,5 @@
 ---
-title: Variabili e tipi in Python
+title: Variabili e tipi
 layout: default
 parent: Coding in Python
 nav_order: 3

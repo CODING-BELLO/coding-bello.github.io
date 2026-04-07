@@ -1,8 +1,8 @@
 ---
-title: Controllo di flusso
+title: While
 layout: default
-nav_order: 14
-parent: Coding in Python
+nav_order: 31
+parent: Iterazione
 ---
 
 # Cicli e iterazioni

@@ -1,5 +1,5 @@
 ---
-title: Operatori e espressioni
+title: Operatori ed espressioni
 layout: default
 parent: Coding in Python
 nav_order: 5

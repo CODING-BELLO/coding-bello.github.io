@@ -1,8 +1,8 @@
 ---
-title: Controllo di flusso (condizioni e operatori logici)
+title: Condizioni e operatori logici
 layout: default
-nav_order: 12
-parent: Coding in Python
+nav_order: 23
+parent: Controllo di flusso
 ---
 
 # Controllo di flusso

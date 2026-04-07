@@ -1,8 +1,8 @@
 ---
-title: Controllo di flusso (match)
+title: Match Case
 layout: default
-nav_order: 13
-parent: Coding in Python
+nav_order: 23
+parent: Controllo di flusso
 ---
 
 # Controllo di flusso
