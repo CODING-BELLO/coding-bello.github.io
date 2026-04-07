@@ -107,4 +107,4 @@ print("Hello world!")
 - le **f-string** sono molto comode per inserire variabili dentro una frase;
 - i commenti si scrivono con `#`.
 
-[Prossima lezione](4-variabili_e_tipi)
+[Prossima lezione](3-variabili_e_tipi)

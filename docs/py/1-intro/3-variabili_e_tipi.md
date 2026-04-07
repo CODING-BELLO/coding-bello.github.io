@@ -2,7 +2,7 @@
 title: Variabili e tipi in Python
 layout: default
 parent: Coding in Python
-nav_order: 4
+nav_order: 3
 ---
 
 # Variabili e tipi in Python
@@ -22,8 +22,8 @@ Qui:
 - `eta` è una variabile che contiene `17`
 - `nome` è una variabile che contiene `"Anna"`
 
-In Python non dobbiamo dichiarare prima il tipo come in C++.  
-Scriviamo direttamente il nome, `=`, e il valore.
+> Si può immaginare una variabile come una **scatola** con un'etichetta, all'interno della quale viene memorizzato un valore.  
+> Il programma può utilizzare o modificare questo valore facendo riferimento al nome riportato sull'etichetta.
 
 ## Assegnazione
 
@@ -37,15 +37,16 @@ y = x
 Dopo queste istruzioni:
 - `x` vale `10`
 - `y` vale `10`
-
 ## Tipi di dato di base
 
-In Python i tipi fondamentali che useremo spesso sono:
+In Python ogni valore appartiene a un **tipo di dato**.
+
+I tipi fondamentali che verranno usati più spesso sono:
 
 - `int` → numeri interi
-- `float` → numeri con la virgola
+- `float` → numeri decimali
 - `str` → testo
-- `bool` → `True` o `False`
+- `bool` → valori logici: `True` oppure `False`
 
 Esempi:
 
@@ -56,11 +57,23 @@ nome = "Luca"
 is_studente = True
 ```
 
-## Python è tipizzato, ma in modo dinamico
+## Python è un linguaggio tipizzato dinamicamente
 
-Python controlla comunque i tipi, ma il tipo viene associato al valore durante l'esecuzione.
+Python distingue i diversi tipi di dato, quindi è un linguaggio **tipizzato**.
 
-Possiamo verificarlo con `type()`:
+Tuttavia, non è necessario dichiarare prima il tipo di una variabile:  
+il tipo viene determinato automaticamente in base al valore assegnato durante l'esecuzione del programma.
+
+Ad esempio:
+
+```python
+eta = 17
+nome = "Luca"
+```
+
+Nel primo caso Python riconosce che `17` è un valore di tipo `int`, mentre nel secondo caso riconosce che `"Luca"` è un valore di tipo `str`.
+
+È possibile verificare il tipo di un valore usando la funzione `type()`:
 
 ```python
 eta = 17
@@ -69,6 +82,8 @@ print(type(eta))
 nome = "Luca"
 print(type(nome))
 ```
+
+> In Python il tipo viene riconosciuto automaticamente in base al valore assegnato.
 
 ## Riassegnazione
 
@@ -80,16 +95,6 @@ print(x)
 
 x = 9
 print(x)
-```
-
-## Operazioni con variabili
-
-```python
-a = 10
-b = 3
-
-somma = a + b
-print(somma)
 ```
 
 ## Conversione di tipo
@@ -153,4 +158,4 @@ Conta il **valore assegnato**, non il nome scelto.
 - `type()` permette di vedere il tipo di un valore;
 - si possono fare conversioni esplicite con funzioni come `int()` e `str()`.
 
-[Prossima lezione](../2-fondamenti/5-controllo_flusso)
+[Prossima lezione](4_input)

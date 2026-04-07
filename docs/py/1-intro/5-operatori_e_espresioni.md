@@ -2,7 +2,7 @@
 title: Operatori e espressioni
 layout: default
 parent: Coding in Python
-nav_order: 3
+nav_order: 4
 ---
 
 # Operatori ed espressioni
@@ -79,15 +79,18 @@ print(not a)
 
 ## Espressioni
 
-Un'espressione è tutto ciò che Python può valutare per ottenere un risultato.
+Un'espressione è una parte di codice che Python può valutare per ottenere un valore.
+
+In pratica, è qualcosa che, una volta elaborata da Python, produce un risultato.
+Questo risultato può essere, ad esempio, un numero oppure un valore booleano (`True` o `False`).
 
 Esempi:
 
 ```python
-2 + 3
-eta >= 18
-nome == "Luca"
-(10 + 2) * 3
+2 + 3           # produce 5
+eta >= 18       # produce True oppure False
+nome == "Luca"  # produce True oppure False
+(10 + 2) * 3    # produce 36
 ```
 
 ## Precedenza degli operatori
@@ -99,8 +102,6 @@ print(2 + 3 * 4)      # 14
 print((2 + 3) * 4)    # 20
 ```
 
-Le parentesi aiutano tantissimo a rendere il codice più chiaro.
-
 ## Ricapitoliamo
 
 - gli operatori servono a costruire espressioni;
@@ -109,3 +110,5 @@ Le parentesi aiutano tantissimo a rendere il codice più chiaro.
 - quelli logici combinano condizioni;
 - `=` assegna, `==` confronta;
 - le parentesi aiutano a controllare l'ordine delle operazioni.
+
+[Prossima lezione](4-variabili_e_tipi)
