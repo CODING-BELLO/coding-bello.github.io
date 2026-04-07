@@ -2,7 +2,7 @@
 title: Algoritmi di ricerca e ordinamento
 layout: default
 nav_order: 18
-parent: Coding in C++
+parent: C++
 ---
 
 # Algoritmi notevoli e costo computazionale

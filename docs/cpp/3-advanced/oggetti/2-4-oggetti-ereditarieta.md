@@ -2,7 +2,7 @@
 title: Programmazione a oggetti 4
 layout: default
 nav_order: 36
-parent: Coding in C++
+parent: C++
 ---
 # Programmazione a oggetti 4 - Ereditarietà e polimorfismo
 

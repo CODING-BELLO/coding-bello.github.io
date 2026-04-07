@@ -1,7 +1,7 @@
 ---
 title: Classi e oggetti
 layout: default
-parent: Coding in Java
+parent: Java
 nav_order: 7
 has_children: true
 ---

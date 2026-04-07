@@ -2,7 +2,7 @@
 title: Variabili e tipi
 layout: default
 nav_order: 3
-parent: Coding in C++
+parent: C++
 ---
 # Variabili e tipi
 

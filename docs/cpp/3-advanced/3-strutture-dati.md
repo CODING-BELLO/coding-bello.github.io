@@ -2,7 +2,7 @@
 title: Strutture dati avanzate
 layout: default
 nav_order: 35
-parent: Coding in C++
+parent: C++
 ---
 
 ---

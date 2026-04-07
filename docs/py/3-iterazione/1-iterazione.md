@@ -2,7 +2,7 @@
 title: Iterazione
 layout: default
 nav_order: 31
-parent: Coding in Python
+parent: Python
 ---
 
 # Cicli e iterazioni

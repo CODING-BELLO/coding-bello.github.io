@@ -2,7 +2,7 @@
 title: Programmazione a oggetti 1
 layout: default
 nav_order: 33
-parent: Coding in C++
+parent: C++
 ---
 # Programmazione a Oggetti 
 

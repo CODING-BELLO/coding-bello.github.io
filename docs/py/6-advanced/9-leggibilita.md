@@ -2,7 +2,7 @@
 title: Leggibilità
 layout: default
 nav_order: 61
-parent: Coding in Python
+parent: Python
 ---
 
 # Leggibilità del codice

@@ -2,7 +2,7 @@
 title: Controllo di flusso
 layout: default
 nav_order: 11
-parent: Coding in C++
+parent: C++
 ---
 # Controllo di flusso
 

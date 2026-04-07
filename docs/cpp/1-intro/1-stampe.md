@@ -2,7 +2,7 @@
 title: Stampe
 layout: default
 nav_order: 2
-parent: Coding in C++
+parent: C++
 ---
 # Stampe, comunichiamo con l'utente!
 

@@ -2,7 +2,7 @@
 title: Controllo di flusso
 layout: default
 nav_order: 21
-parent: Coding in Python
+parent: Python
 ---
 
 # Controllo di flusso

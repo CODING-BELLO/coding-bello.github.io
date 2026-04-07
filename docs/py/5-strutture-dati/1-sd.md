@@ -2,7 +2,7 @@
 title: Strutture dati
 layout: default
 nav_order: 51
-parent: Coding in Python
+parent: Python
 ---
 
 # Strutture dati di base in Python

@@ -1,7 +1,7 @@
 ---
 title: Operatori ed espressioni
 layout: default
-parent: Coding in Python
+parent: Python
 nav_order: 5
 ---
 

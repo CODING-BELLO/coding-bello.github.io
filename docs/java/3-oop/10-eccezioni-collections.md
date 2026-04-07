@@ -1,7 +1,7 @@
 ---
 title: Eccezioni e collections
 layout: default
-parent: Coding in Java
+parent: Java
 nav_order: 10
 ---
 

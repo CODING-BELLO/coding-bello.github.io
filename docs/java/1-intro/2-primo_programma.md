@@ -1,7 +1,7 @@
 ---
 title: Primo programma
 layout: default
-parent: Coding in Java
+parent: Java
 nav_order: 2
 ---
 

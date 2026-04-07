@@ -2,7 +2,7 @@
 title: Matrici
 layout: default
 nav_order: 17
-parent: Coding in C++
+parent: C++
 ---
 
 

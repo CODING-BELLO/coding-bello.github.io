@@ -2,7 +2,7 @@
 title: Algoritmi e STL
 layout: default
 nav_order: 36
-parent: Coding in C++
+parent: C++
 ---
 # Algoritmi fondamentali
 

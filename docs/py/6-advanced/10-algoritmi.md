@@ -2,7 +2,7 @@
 title: Algoritmi notevoli
 layout: default
 nav_order: 62
-parent: Coding in Python
+parent: Python
 ---
 
 # Algoritmi notevoli

@@ -1,7 +1,7 @@
 ---
 title: Race condition e synchronized
 layout: default
-parent: Coding in Java
+parent: Java
 nav_order: 12
 ---
 

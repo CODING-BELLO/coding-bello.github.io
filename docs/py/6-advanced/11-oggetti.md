@@ -2,7 +2,7 @@
 title: Programmazione a oggetti
 layout: default
 nav_order: 63
-parent: Coding in Python
+parent: Python
 ---
 
 # Programmazione a oggetti

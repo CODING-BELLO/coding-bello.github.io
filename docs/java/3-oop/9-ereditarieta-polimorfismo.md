@@ -1,7 +1,7 @@
 ---
 title: Ereditarietà e polimorfismo
 layout: default
-parent: Coding in Java
+parent: Java
 nav_order: 9
 ---
 

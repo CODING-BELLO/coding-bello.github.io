@@ -2,7 +2,7 @@
 title: Programmazione a oggetti 3
 layout: default
 nav_order: 35
-parent: Coding in C++
+parent: C++
 ---
 # Programmazione a oggetti 3 - Composizione di oggetti
 

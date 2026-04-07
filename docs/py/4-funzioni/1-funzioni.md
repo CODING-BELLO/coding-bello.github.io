@@ -2,7 +2,7 @@
 title: Funzioni
 layout: default
 nav_order: 41
-parent: Coding in Python
+parent: Python
 ---
 
 # Funzioni in Python

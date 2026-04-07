@@ -2,7 +2,7 @@
 title: Operatori ed espressioni
 layout: default
 nav_order: 4
-parent: Coding in C++
+parent: C++
 ---
 # Operatori ed espressioni
 

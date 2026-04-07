@@ -2,7 +2,7 @@
 title: Primo programma
 layout: default
 nav_order: 1
-parent: Coding in C++
+parent: C++
 has_children: true
 ---
 

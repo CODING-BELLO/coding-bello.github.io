@@ -1,7 +1,7 @@
 ---
 title: Operatori ed espressioni
 layout: default
-parent: Coding in Java
+parent: Java
 nav_order: 4
 ---
 

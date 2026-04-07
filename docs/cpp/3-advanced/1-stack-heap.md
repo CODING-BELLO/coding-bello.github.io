@@ -2,7 +2,7 @@
 title: Stack e Heap
 layout: default
 nav_order: 32
-parent: Coding in C++
+parent: C++
 ---
 
 # Stack e Heap in C++

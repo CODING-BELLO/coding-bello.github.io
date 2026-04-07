@@ -2,7 +2,7 @@
 title: Funzioni
 layout: default
 nav_order: 13
-parent: Coding in C++
+parent: C++
 ---
 # Funzioni
 

@@ -2,7 +2,7 @@
 title: Cicli
 layout: default
 nav_order: 12
-parent: Coding in C++
+parent: C++
 ---
 # I cicli, le ripetizioni, le ripetizioni, le ripetizioni
 

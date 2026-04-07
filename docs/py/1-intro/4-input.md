@@ -1,7 +1,7 @@
 ---
 title: Input
 layout: default
-parent: Coding in Python
+parent: Python
 nav_order: 4
 ---
 

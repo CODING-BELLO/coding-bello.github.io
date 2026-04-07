@@ -2,7 +2,7 @@
 title: Array e vector
 layout: default
 nav_order: 16
-parent: Coding in C++
+parent: C++
 ---
 
 # Strutture dati di base

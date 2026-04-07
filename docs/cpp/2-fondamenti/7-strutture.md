@@ -2,7 +2,7 @@
 title: Strutture dati base struct
 layout: default
 nav_order: 15
-parent: Coding in C++
+parent: C++
 ---
 
 

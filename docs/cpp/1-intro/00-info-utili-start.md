@@ -2,7 +2,7 @@
 title: Cominciare a programmare
 layout: default
 nav_order: 0
-parent: Coding in C++
+parent: C++
 has_children: true
 ---
 

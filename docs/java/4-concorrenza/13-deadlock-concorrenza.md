@@ -1,7 +1,7 @@
 ---
 title: Deadlock e concorrenza
 layout: default
-parent: Coding in Java
+parent: Java
 nav_order: 13
 ---
 

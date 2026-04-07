@@ -2,7 +2,7 @@
 title: Programmazione a oggetti 2
 layout: default
 nav_order: 34
-parent: Coding in C++
+parent: C++
 ---
 # Programmazione a oggetti 2 - Overloading
 

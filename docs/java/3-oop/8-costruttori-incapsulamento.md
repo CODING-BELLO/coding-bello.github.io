@@ -1,7 +1,7 @@
 ---
 title: Costruttori e incapsulamento
 layout: default
-parent: Coding in Java
+parent: Java
 nav_order: 8
 ---
 
