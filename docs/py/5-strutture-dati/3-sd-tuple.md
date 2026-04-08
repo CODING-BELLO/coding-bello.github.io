@@ -5,31 +5,6 @@ nav_order: 53
 parent: Strutture dati
 ---
 
-## Tuple
-
-Le tuple sono simili alle liste, ma **immutabili**.
-
-```python
-coordinate = (4, 7)
-print(coordinate[0])
-```
-
-Sono utili quando i dati non devono cambiare.
-
-## Ricapitoliamo
-
-- le **tuple** sono ordinate ma non modificabili;
-- ...
-
-[Prossima lezione](11-leggibilita)
-
----
-title: Tuple
-layout: default
-nav_order: 53
-parent: Strutture dati
----
-
 # Tuple
 
 Una **tupla** serve a raccogliere più valori in un'unica struttura.
