@@ -64,5 +64,3 @@ Servono quando i dati hanno una struttura più ricca:
 - le list comprehension aiutano a scrivere codice più compatto;
 - i dizionari possono contenere strutture complesse;
 - scegliere bene la struttura dati rende il programma più chiaro ed efficace.
-
-[Prossima lezione](13-algoritmi.md)

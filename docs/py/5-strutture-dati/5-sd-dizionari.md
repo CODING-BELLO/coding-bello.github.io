@@ -1,3 +1,4 @@
+
 ---
 title: Dizionari
 layout: default
@@ -5,74 +6,25 @@ nav_order: 55
 parent: Strutture dati
 ---
 
-# Strutture dati di base in Python
+# Dizionari
 
-Quando i dati diventano tanti, una singola variabile non basta più.  
-Servono strutture capaci di contenere più valori.
+Un **dizionario** serve a raccogliere più informazioni in un'unica struttura.
 
-Le più importanti in Python sono:
-- **liste**
-- **tuple**
-- **insiemi**
-- **dizionari**
+A differenza di una lista o di una tupla, in un dizionario ogni valore è associato a un nome.
 
-## Liste
+Questo lo rende utile quando i dati non sono soltanto in sequenza, ma rappresentano informazioni con un significato preciso.
 
-Le liste sono sequenze ordinate e modificabili.
+Ad esempio, un contatto può essere descritto da:
 
-```python
-numeri = [10, 20, 30, 40]
-print(numeri)
-```
+- nome
+- telefono
+- email
 
-### Accesso tramite indice
+Oppure uno studente può essere descritto da:
 
-```python
-print(numeri[0])
-print(numeri[2])
-```
-
-### Modifica
-
-```python
-numeri[1] = 99
-print(numeri)
-```
-
-### Aggiungere elementi
-
-```python
-numeri.append(50)
-print(numeri)
-```
-
-## Tuple
-
-Le tuple sono simili alle liste, ma **immutabili**.
-
-```python
-coordinate = (4, 7)
-print(coordinate[0])
-```
-
-Sono utili quando i dati non devono cambiare.
-
-## Insiemi (`set`)
-
-Gli insiemi:
-- non mantengono l'ordine;
-- non ammettono duplicati.
-
-```python
-valori = {1, 2, 2, 3, 4}
-print(valori)
-```
-
-Ottimi quando ci interessa sapere quali elementi sono presenti, senza ripetizioni.
-
-## Dizionari
-
-I dizionari memorizzano coppie **chiave → valore**.
+- nome
+- età
+- classe
 
 ```python
 studente = {
@@ -81,40 +33,39 @@ studente = {
     "classe": "4A"
 }
 
+print(studente)
+```
+
+In questo esempio il dizionario raccoglie più informazioni sullo stesso studente.
+
+---
+
+## Accesso ai valori
+
+In un dizionario i valori non vengono letti tramite posizione, ma tramite il nome a cui sono associati.
+
+```python
 print(studente["nome"])
 print(studente["eta"])
 ```
 
-Sono molto potenti perché permettono di rappresentare dati strutturati.
+---
 
-## Ciclo sulle liste
+## Perché usare un dizionario
 
-```python
-frutti = ["mela", "banana", "pera"]
+Un dizionario è utile quando si vuole rappresentare una scheda o un oggetto descritto da campi diversi.
 
-for frutto in frutti:
-    print(frutto)
-```
+Per esempio, nel caso di uno studente, scrivere `nome`, `eta` e `classe` è molto più chiaro che usare semplicemente una sequenza di valori senza significato esplicito.
 
-## Lunghezza
+Per questo motivo i dizionari sono molto usati quando si vogliono organizzare dati eterogenei riferiti alla stessa entità.
 
-```python
-print(len(frutti))
-```
-
-## Appartenenza
-
-```python
-print("mela" in frutti)
-print("kiwi" in frutti)
-```
+---
 
 ## Ricapitoliamo
 
-- le **liste** sono ordinate e modificabili;
-- le **tuple** sono ordinate ma non modificabili;
-- i **set** non hanno duplicati;
-- i **dizionari** associano chiavi e valori;
-- queste strutture servono per modellare meglio i dati.
+- un **dizionario** permette di raccogliere più informazioni in un'unica struttura
+- in un dizionario ogni valore è associato a un nome
+- i valori si leggono usando il nome a cui sono associati
+- un dizionario è utile per rappresentare dati con campi ben distinti
 
 [Prossima lezione](11-leggibilita)

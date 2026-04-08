@@ -5,116 +5,55 @@ nav_order: 54
 parent: Strutture dati
 ---
 
-# Strutture dati di base in Python
+# Insiemi
 
-Quando i dati diventano tanti, una singola variabile non basta più.  
-Servono strutture capaci di contenere più valori.
+Un **insieme** serve a raccogliere più valori in un'unica struttura.
 
-Le più importanti in Python sono:
-- **liste**
-- **tuple**
-- **insiemi**
-- **dizionari**
+Gli insiemi sono utili quando interessa sapere **quali valori sono presenti**, senza però considerare le ripetizioni.
 
-## Liste
+Per questo motivo, in un insieme uno stesso valore compare una sola volta.
 
-Le liste sono sequenze ordinate e modificabili.
+Ad esempio, un insieme può essere utile per rappresentare:
 
-```python
-numeri = [10, 20, 30, 40]
-print(numeri)
-```
-
-### Accesso tramite indice
-
-```python
-print(numeri[0])
-print(numeri[2])
-```
-
-### Modifica
-
-```python
-numeri[1] = 99
-print(numeri)
-```
-
-### Aggiungere elementi
-
-```python
-numeri.append(50)
-print(numeri)
-```
-
-## Tuple
-
-Le tuple sono simili alle liste, ma **immutabili**.
-
-```python
-coordinate = (4, 7)
-print(coordinate[0])
-```
-
-Sono utili quando i dati non devono cambiare.
-
-## Insiemi (`set`)
-
-Gli insiemi:
-- non mantengono l'ordine;
-- non ammettono duplicati.
+- le lettere presenti in una parola
+- gli sport praticati in una classe
+- i numeri già estratti in un gioco
 
 ```python
 valori = {1, 2, 2, 3, 4}
 print(valori)
 ```
 
-Ottimi quando ci interessa sapere quali elementi sono presenti, senza ripetizioni.
+In questo esempio il valore `2` è stato scritto due volte, ma nell'insieme compare una sola volta.
 
-## Dizionari
-
-I dizionari memorizzano coppie **chiave → valore**.
-
-```python
-studente = {
-    "nome": "Luca",
-    "eta": 17,
-    "classe": "4A"
-}
-
-print(studente["nome"])
-print(studente["eta"])
-```
-
-Sono molto potenti perché permettono di rappresentare dati strutturati.
-
-## Ciclo sulle liste
-
-```python
-frutti = ["mela", "banana", "pera"]
-
-for frutto in frutti:
-    print(frutto)
-```
-
-## Lunghezza
-
-```python
-print(len(frutti))
-```
+---
 
 ## Appartenenza
 
+Gli insiemi sono particolarmente utili quando si vuole controllare se un valore è presente oppure no.
+
 ```python
+frutti = {"mela", "pera", "banana"}
+
 print("mela" in frutti)
 print("kiwi" in frutti)
 ```
 
+---
+
+## Perché usare un insieme
+
+Un insieme è adatto quando i duplicati non servono e conta soprattutto la presenza o l'assenza di un valore.
+
+Per esempio, se si vogliono rappresentare le lettere presenti nella parola `banana`, non interessa salvare tutte le ripetizioni, ma sapere quali lettere compaiono.
+
+In questo caso un insieme è più adatto di una lista.
+
+---
+
 ## Ricapitoliamo
 
-- le **liste** sono ordinate e modificabili;
-- le **tuple** sono ordinate ma non modificabili;
-- i **set** non hanno duplicati;
-- i **dizionari** associano chiavi e valori;
-- queste strutture servono per modellare meglio i dati.
-
-[Prossima lezione](11-leggibilita)
+- un **insieme** permette di raccogliere più valori in un'unica struttura
+- in un insieme i duplicati non vengono mantenuti
+- un insieme è utile quando conta sapere se un valore è presente
+- un insieme è adatto quando le ripetizioni non interessano

@@ -102,5 +102,3 @@ Però prima è importante capire **la logica** dietro questi strumenti.
 - prima si ragiona, poi si scrive il codice;
 - saper costruire algoritmi significa saper risolvere problemi;
 - Python offre strumenti comodi, ma capire la logica resta la cosa più importante.
-
-[Prossima lezione](../3-advanced/11-oggetti)

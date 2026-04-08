@@ -98,5 +98,3 @@ Quando capiamo bene cosa fa ogni parte, troviamo gli errori più facilmente.
 - commenta solo quando serve davvero;
 - dividi il problema in parti più piccole;
 - segui uno stile coerente.
-
-[Prossima lezione](12-algoritmi)

@@ -87,5 +87,3 @@ print(r.area())
 - `__init__` inizializza l'oggetto;
 - `self` indica l'istanza corrente;
 - i metodi descrivono i comportamenti dell'oggetto.
-
-[Prossima lezione](12-strutture_dati.md)

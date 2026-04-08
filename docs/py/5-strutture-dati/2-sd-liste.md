@@ -5,116 +5,75 @@ nav_order: 52
 parent: Strutture dati
 ---
 
-# Strutture dati di base in Python
+# Liste
 
-Quando i dati diventano tanti, una singola variabile non basta più.  
-Servono strutture capaci di contenere più valori.
+Una **lista** serve a memorizzare più valori in un'unica variabile.
 
-Le più importanti in Python sono:
-- **liste**
-- **tuple**
-- **insiemi**
-- **dizionari**
+È utile, ad esempio, quando si vogliono rappresentare:
 
-## Liste
+- i voti di uno studente
+- i nomi degli alunni di una classe
+- una sequenza di numeri
+- un elenco di prodotti
 
-Le liste sono sequenze ordinate e modificabili.
+In Python una lista è una struttura dati **ordinata**: gli elementi hanno una posizione.
+
+Inoltre è **modificabile**: gli elementi possono essere cambiati e se ne possono aggiungere di nuovi.
 
 ```python
 numeri = [10, 20, 30, 40]
 print(numeri)
 ```
 
-### Accesso tramite indice
+In questo esempio la lista contiene quattro numeri.
+
+---
+
+## Accesso agli elementi
+
+Ogni elemento della lista ha una posizione, chiamata **indice**.
+
+Il primo elemento si trova in posizione `0`, il secondo in posizione `1`, e così via.
 
 ```python
 print(numeri[0])
 print(numeri[2])
 ```
 
-### Modifica
+---
+
+## Modifica di un elemento
+
+Una lista può essere modificata.
 
 ```python
 numeri[1] = 99
 print(numeri)
 ```
 
-### Aggiungere elementi
+In questo caso il secondo elemento della lista viene sostituito con `99`.
+
+---
+
+## Aggiunta di un elemento
+
+A una lista si possono aggiungere nuovi valori.
 
 ```python
 numeri.append(50)
 print(numeri)
 ```
 
-## Tuple
+Il metodo `append()` aggiunge un nuovo elemento in fondo alla lista.
 
-Le tuple sono simili alle liste, ma **immutabili**.
-
-```python
-coordinate = (4, 7)
-print(coordinate[0])
-```
-
-Sono utili quando i dati non devono cambiare.
-
-## Insiemi (`set`)
-
-Gli insiemi:
-- non mantengono l'ordine;
-- non ammettono duplicati.
-
-```python
-valori = {1, 2, 2, 3, 4}
-print(valori)
-```
-
-Ottimi quando ci interessa sapere quali elementi sono presenti, senza ripetizioni.
-
-## Dizionari
-
-I dizionari memorizzano coppie **chiave → valore**.
-
-```python
-studente = {
-    "nome": "Luca",
-    "eta": 17,
-    "classe": "4A"
-}
-
-print(studente["nome"])
-print(studente["eta"])
-```
-
-Sono molto potenti perché permettono di rappresentare dati strutturati.
-
-## Ciclo sulle liste
-
-```python
-frutti = ["mela", "banana", "pera"]
-
-for frutto in frutti:
-    print(frutto)
-```
-
-## Lunghezza
-
-```python
-print(len(frutti))
-```
-
-## Appartenenza
-
-```python
-print("mela" in frutti)
-print("kiwi" in frutti)
-```
+---
 
 ## Ricapitoliamo
 
-- le **liste** sono ordinate e modificabili;
-- le **tuple** sono ordinate ma non modificabili;
-- i **set** non hanno duplicati;
-- i **dizionari** associano chiavi e valori;
-- queste strutture servono per modellare meglio i dati.
+- una **lista** permette di memorizzare più valori in un'unica variabile
+- gli elementi della lista hanno una posizione
+- il primo elemento ha indice `0`
+- una lista può essere modificata
+- a una lista si possono aggiungere nuovi elementi
 
-[Prossima lezione](11-leggibilita)
+Nei prossimi esempi vedremo come leggere, scorrere e usare le liste nei programmi.

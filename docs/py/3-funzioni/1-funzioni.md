@@ -1,7 +1,7 @@
 ---
 title: Funzioni
 layout: default
-nav_order: 41
+nav_order: 31
 parent: Python
 ---
 
@@ -135,4 +135,3 @@ Questa è programmazione vera: prendere uno schema e renderlo riutilizzabile.
 - può restituire un valore con `return`;
 - aiuta a scrivere codice più ordinato, generale e leggibile.
 
-[Prossima lezione](10-strutture_dati-base)

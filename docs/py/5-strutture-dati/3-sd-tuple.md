@@ -5,47 +5,6 @@ nav_order: 53
 parent: Strutture dati
 ---
 
-# Strutture dati di base in Python
-
-Quando i dati diventano tanti, una singola variabile non basta più.  
-Servono strutture capaci di contenere più valori.
-
-Le più importanti in Python sono:
-- **liste**
-- **tuple**
-- **insiemi**
-- **dizionari**
-
-## Liste
-
-Le liste sono sequenze ordinate e modificabili.
-
-```python
-numeri = [10, 20, 30, 40]
-print(numeri)
-```
-
-### Accesso tramite indice
-
-```python
-print(numeri[0])
-print(numeri[2])
-```
-
-### Modifica
-
-```python
-numeri[1] = 99
-print(numeri)
-```
-
-### Aggiungere elementi
-
-```python
-numeri.append(50)
-print(numeri)
-```
-
 ## Tuple
 
 Le tuple sono simili alle liste, ma **immutabili**.
@@ -57,64 +16,72 @@ print(coordinate[0])
 
 Sono utili quando i dati non devono cambiare.
 
-## Insiemi (`set`)
+## Ricapitoliamo
 
-Gli insiemi:
-- non mantengono l'ordine;
-- non ammettono duplicati.
+- le **tuple** sono ordinate ma non modificabili;
+- ...
 
-```python
-valori = {1, 2, 2, 3, 4}
-print(valori)
-```
+[Prossima lezione](11-leggibilita)
 
-Ottimi quando ci interessa sapere quali elementi sono presenti, senza ripetizioni.
+---
+title: Tuple
+layout: default
+nav_order: 53
+parent: Strutture dati
+---
 
-## Dizionari
+# Tuple
 
-I dizionari memorizzano coppie **chiave → valore**.
+Una **tupla** serve a raccogliere più valori in un'unica struttura.
 
-```python
-studente = {
-    "nome": "Luca",
-    "eta": 17,
-    "classe": "4A"
-}
+Da questo punto di vista è simile a una lista, perché anche una tupla contiene più elementi in un certo ordine.
 
-print(studente["nome"])
-print(studente["eta"])
-```
+La differenza principale è che una tupla, una volta creata, **non viene modificata**.
 
-Sono molto potenti perché permettono di rappresentare dati strutturati.
+Le tuple sono utili quando più valori appartengono allo stesso gruppo e hanno senso insieme.
 
-## Ciclo sulle liste
+Ad esempio:
+
+- le coordinate di un punto
+- una data, formata da giorno, mese e anno
+- i dati essenziali di un contatto
 
 ```python
-frutti = ["mela", "banana", "pera"]
-
-for frutto in frutti:
-    print(frutto)
+coordinate = (4, 7)
+print(coordinate)
 ```
 
-## Lunghezza
+In questo esempio la tupla contiene due valori che rappresentano le coordinate di un punto.
+
+---
+
+## Accesso agli elementi
+
+Anche nelle tuple gli elementi hanno una posizione, chiamata **indice**.
+
+Il primo elemento si trova in posizione `0`, il secondo in posizione `1`, e così via.
 
 ```python
-print(len(frutti))
+print(coordinate[0])
+print(coordinate[1])
 ```
 
-## Appartenenza
+---
 
-```python
-print("mela" in frutti)
-print("kiwi" in frutti)
-```
+## Perché usare una tupla
+
+Una tupla è utile quando i valori formano un gruppo stabile.
+
+Per esempio, le coordinate di un punto rappresentano un'unica informazione: non sono semplicemente una lista generica di numeri, ma due valori collegati tra loro.
+
+La tupla è quindi adatta quando si vuole rappresentare un piccolo insieme di dati che stanno insieme.
+
+---
 
 ## Ricapitoliamo
 
-- le **liste** sono ordinate e modificabili;
-- le **tuple** sono ordinate ma non modificabili;
-- i **set** non hanno duplicati;
-- i **dizionari** associano chiavi e valori;
-- queste strutture servono per modellare meglio i dati.
-
-[Prossima lezione](11-leggibilita)
+- una **tupla** permette di raccogliere più valori in un'unica struttura
+- gli elementi della tupla hanno una posizione
+- il primo elemento ha indice `0`
+- una tupla è ordinata
+- una tupla, una volta creata, non viene modificata
