@@ -7,19 +7,19 @@ has_children: true
 parent: Esercizi
 ---
 
-# Esercizi Python
+# Esercizi introduttivi
 
 ## Variabili, input e strutture condizionali
 
 ---
 
-## 1. Somma tra due numeri
+## A1. Somma tra due numeri
 
 Scrivere un programma che, presi in input due numeri, ne calcoli e ne stampi la somma.
 
 ---
 
-## 2. Maggiore tra due numeri
+## A2. Maggiore tra due numeri
 
 Scrivere un programma che legga due numeri da tastiera e mostri quale dei due è il maggiore.
 
@@ -27,13 +27,13 @@ Se i due valori sono uguali, il programma deve segnalarlo chiaramente.
 
 ---
 
-## 3. Maggiore tra tre numeri
+## A3. Maggiore tra tre numeri
 
 Leggere tre numeri e stampare il valore massimo tra i tre.
 
 ---
 
-## 4. Operazioni tra numeri
+## A4. Operazioni tra numeri
 
 Scrivere un programma che, presi in input due numeri e una scelta dell'utente da 1 a 4, calcoli l'operazione corrispondente.
 
@@ -46,7 +46,7 @@ Le scelte possibili sono:
 
 ---
 
-## 5. Conversione da metri
+## A5. Conversione da metri
 
 Scrivere una funzione che riceva una misura espressa in metri e mostri l'equivalente in:
 
@@ -55,7 +55,7 @@ Scrivere una funzione che riceva una misura espressa in metri e mostri l'equival
 
 ---
 
-## 6. Da giorni, ore e minuti a secondi
+## A6. Da giorni, ore e minuti a secondi
 
 Leggere da tastiera un numero di giorni, ore e minuti e calcolare il totale corrispondente in secondi.
 

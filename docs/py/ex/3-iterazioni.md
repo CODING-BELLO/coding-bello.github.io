@@ -7,21 +7,21 @@ has_children: true
 parent: Esercizi
 ---
 
-# Esercizi Python
+# Esercizi con i costrutti iterativi
 
-## 1. Massimo tra numeri inseriti dall'utente
+## C1. Massimo tra numeri inseriti dall'utente
 
 Scrivere un programma che, utilizzando `while`, legga una serie di numeri inseriti dall'utente e determini il valore più grande.
 
 ---
 
-## 2. Massimo e minimo tra numeri inseriti dall'utente
+## C2. Massimo e minimo tra numeri inseriti dall'utente
 
 Modificare l'esercizio precedente, sempre utilizzando `while`, in modo da determinare sia il valore più grande sia il valore più piccolo.
 
 ---
 
-## 3. Somma di numeri positivi
+## C3. Somma di numeri positivi
 
 Leggere una serie di numeri da tastiera, utilizzando `while`, finché i valori inseriti sono positivi.
 
@@ -29,7 +29,7 @@ Al termine, stampare la somma dei numeri inseriti.
 
 ---
 
-## 4. Calcolatore di aree
+## C4. Calcolatore di aree
 
 Realizzare un programma che, in base alla scelta dell'utente, calcoli l'area di una tra queste figure:
 
@@ -43,13 +43,13 @@ Per la scelta dell'operazione si può utilizzare `if` oppure `match`.
 
 ---
 
-## 5. Riga di asterischi
+## C5. Riga di asterischi
 
 Scrivere un programma che, utilizzando `for`, acquisisca un numero e stampi una riga composta da tanti asterischi quanto vale il numero inserito.
 
 ---
 
-## 6. Verifica della somma
+## C6. Verifica della somma
 
 Scrivere un programma che, utilizzando `while`, acquisisca due numeri dall'utente e chieda di inserire la loro somma.
 
@@ -59,7 +59,7 @@ Quando viene inserita la somma corretta, il programma deve stampare `Bravo` e te
 
 ---
 
-## 7. Istogramma con asterischi
+## C7. Istogramma con asterischi
 
 Scrivere una funzione che, utilizzando `for`, riceva una lista di numeri e stampi, per ogni numero, una riga composta da tanti asterischi quanto vale il numero.
 
@@ -70,13 +70,13 @@ Esempio:
 
 ---
 
-## 8. La tua versione di `len()`
+## C8. La tua versione di `len()`
 
 Scrivere una funzione che, utilizzando `for`, restituisca la lunghezza di una stringa oppure di una lista senza usare `len()`.
 
 ---
 
-## 9. Lunghezza delle parole
+## C9. Lunghezza delle parole
 
 Data una lista di parole, costruire, utilizzando `for`, una nuova lista che contenga la lunghezza di ciascuna parola.
 
@@ -94,7 +94,7 @@ può diventare:
 
 ---
 
-## 10. Lista di nomi filtrata per iniziale
+## C10. Lista di nomi filtrata per iniziale
 
 Chiedere all'utente di inserire 10 nomi in una lista.
 
@@ -102,7 +102,7 @@ Successivamente, utilizzare `for` per mostrare soltanto i nomi che iniziano con 
 
 ---
 
-## 11. Stringa al contrario
+## C11. Stringa al contrario
 
 Scrivere una funzione che, utilizzando `for`, riceva una stringa e la stampi al contrario.
 
@@ -114,7 +114,7 @@ abcd -> dcba
 
 ---
 
-## 12. Palindromo
+## C12. Palindromo
 
 Scrivere una funzione che, utilizzando `for`, riceva una parola e controlli se è un palindromo, cioè se si legge allo stesso modo da sinistra a destra e da destra a sinistra.
 

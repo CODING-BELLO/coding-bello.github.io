@@ -6,13 +6,11 @@ has_toc: false
 has_children: true
 parent: Esercizi
 ---
-# Esercizi Python
-
-## Funzioni
+# Esercizi su funzioni
 
 ---
 
-## 1. Conversione da metri
+## B1. Conversione da metri
 
 Scrivere funzioni diverse, una per ogni conversione.
 
@@ -25,7 +23,7 @@ Scrivere una funzione che riceva una misura espressa in metri e ne restituisca l
 
 ---
 
-## 2. Da giorni, ore e minuti a secondi
+## B2. Da giorni, ore e minuti a secondi
 
 Scrivere una funzione che riceva in input giorni, ore e minuti e calcoli il numero totale di secondi.
 
