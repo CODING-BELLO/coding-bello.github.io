@@ -28,6 +28,27 @@ In questo esempio il valore `2` è stato scritto due volte, ma nell'insieme comp
 
 ---
 
+## Aggiunta di un valore
+
+A un insieme si possono aggiungere nuovi valori.
+
+```python
+frutti = {"mela", "pera"}
+frutti.add("banana")
+print(frutti)
+```
+
+Il metodo `add()` aggiunge un nuovo valore all'insieme.
+
+Se il valore è già presente, non viene inserito una seconda volta.
+
+```python
+frutti.add("mela")
+print(frutti)
+```
+
+---
+
 ## Appartenenza
 
 Gli insiemi sono particolarmente utili quando si vuole controllare se un valore è presente oppure no.
@@ -55,5 +76,7 @@ In questo caso un insieme è più adatto di una lista.
 
 - un **insieme** permette di raccogliere più valori in un'unica struttura
 - in un insieme i duplicati non vengono mantenuti
+- con `add()` si può aggiungere un nuovo valore
+- se il valore è già presente, non viene duplicato
 - un insieme è utile quando conta sapere se un valore è presente
 - un insieme è adatto quando le ripetizioni non interessano
