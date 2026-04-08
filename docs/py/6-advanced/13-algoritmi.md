@@ -1,5 +1,5 @@
 ---
-title: Algoritmi e STL
+title: Algoritmi
 layout: default
 nav_order: 65
 parent: Python
