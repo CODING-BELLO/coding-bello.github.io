@@ -20,4 +20,4 @@ La tartaruga:
 
 Per programmare in Python e Turtle, utilizzeremo [Trinket](https://trinket.io/turtle)
 
-![turtle](/coding-bello.github.io/images/turtle.png)
+![turtle](../../images/turtle.png)
