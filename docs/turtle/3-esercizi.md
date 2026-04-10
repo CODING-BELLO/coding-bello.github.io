@@ -1,5 +1,5 @@
 ---
-title: Esercizi
+title: Esercitazione guidata
 layout: default
 nav_order: 3
 parent: Turtle
